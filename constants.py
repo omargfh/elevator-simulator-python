@@ -10,10 +10,10 @@ PROBABILITY = {
     'step': 1,
     'probability': [{
         'value': 1,
-        'probability': 0.5
+        'probability': 0.8
     }] + [{
         'value': x,
-        'probability': 0.5 / ((FLOORS - 1) ^ 2) * (x - 1) * (FLOORS - x)
+        'probability': 0.2 / ((FLOORS - 1) ^ 2) * (x - 1) * (FLOORS - x)
     } for x in range(2, FLOORS)]
 }
 LOOP = asyncio.get_event_loop()

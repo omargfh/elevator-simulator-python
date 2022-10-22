@@ -24,6 +24,9 @@ class Probability():
         tmp_sum = sum([float(x['probability']) for x in prob['probability']])
         self.probabilites = [Probability.ProbabilityEntry(x['probability'] / tmp_sum, x['value']) for x in prob['probability']]
         self.probabilites.sort(key=lambda x: x.probability, reverse=True)
+        for p in self.probabilites:
+            cprint(f"Probability: {p.probability} Value: {p.value}", 'cyan')
+
 
     def rand(self):
         r = random()
@@ -69,8 +72,6 @@ class Passenger():
         else:
             self.random = random
 
-        self.probability = Probability(PROBABILITY)
-
         cprint(f'DECLARATION: Passenger {self.id} created', 'magenta')
 
 
@@ -83,7 +84,7 @@ class Passenger():
         return True
 
     def move(self):
-        self.destination = list(filter(lambda x: x != self.origin, self.probability.rand_unique(2, default=self.origin)))[0]
+        self.destination = list(filter(lambda x: x != self.origin, probability.rand_unique(2, default=self.origin)))[0]
         print(f'Passenger {self.id} moved from {self.origin} to {self.destination}')
 
     def run(self):
@@ -299,6 +300,7 @@ class Elevators(object):
             time.sleep(1)
 
 class Buliding(object):
+
     def __init__(self, floors, elevators, passengers):
         self.floors = [Floor(0, x) for x in range(0, floors)]
         self.elevators = Elevators(1, floors)
@@ -350,3 +352,13 @@ class Buliding(object):
     def run(self):
         LOOP.run_until_complete(self.run_dispatcher())
         LOOP.close()
+
+def run():
+    # Create a Building instance
+    building = Buliding(FLOORS, ELEVATORS, PEOPLE)
+    # Expose floors
+    floors = building.floors
+    # Expose probability
+    probability = Probability(PROBABILITY)
+    # Run the simulation
+    building.run()

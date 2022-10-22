@@ -1,12 +1,5 @@
 from elevator import *
 import argparse
-def run():
-    # Create a Building instance
-    building = Buliding(FLOORS, ELEVATORS, PEOPLE)
-    # Expose floors
-    floors = building.floors
-    # Run the simulation
-    building.run()
 
 algos = ['fcfs', 'sjf', 'srtf', 'random', 'llf', 'edf', 'lifo']
 def main():

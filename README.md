@@ -57,6 +57,7 @@ This project is for educational purposes only. It is not intended to be used in 
 - [ ] Implement Algorithms
 - [ ] Fix asynchronous issues
 - [ ] Use queues instead of sets
+- [ ] Fix variable coupling
 
 ## Changelog
 - 0.1.0
