@@ -8,6 +8,7 @@ def run():
     # Run the simulation
     building.run()
 
+algos = ['fcfs', 'sjf', 'srtf', 'random', 'llf', 'edf', 'lifo']
 def main():
     # usage: python main.py -f [FLOORS] -e [ELEVATORS] -p [PEOPLE] -a [ALGORITHM] -v
     # Parse arguments
@@ -28,41 +29,60 @@ def main():
     FLOORS = args.floors
     ELEVATORS = args.elevators
     PEOPLE = args.people
-    ALGORITHM = args.algorithm
+    ALGORITHM = args.algorithm in algos and args.algorithm or "random"
     VERBOSE = args.verbose
 
     while True:
         cmd = input("> ")
         if cmd == "run":
-            print(f"Running simulation with {FLOORS} floors, {ELEVATORS} elevators, and {PEOPLE} people...")
+            print("Running simulation...")
+            print("Floors: {}, Elevators: {}, People: {}, Algorithm: {}".format(FLOORS, ELEVATORS, PEOPLE, ALGORITHM))
             run()
         elif cmd == "exit":
             break
-        elif cmd.startswith("-f"):
+        elif cmd.startswith("set -f"):
             FLOORS = int(cmd.split(" ")[1])
             print(f"Set number of floors to {FLOORS}")
-        elif cmd.startswith("-e"):
+        elif cmd.startswith("set -e"):
             ELEVATORS = int(cmd.split(" ")[1])
             print(f"Set number of elevators to {ELEVATORS}")
-        elif cmd.startswith("-p"):
+        elif cmd.startswith("set -p"):
             PEOPLE = int(cmd.split(" ")[1])
             print(f"Set number of people to {PEOPLE}")
-        elif cmd.startswith("-a"):
-            ALGORITHM = cmd.split(" ")[1]
-            print(f"Set algorithm to {ALGORITHM}")
-        elif cmd == "-v":
+        elif cmd.startswith("set -a"):
+            if cmd.split(" ")[1] in algos:
+                ALGORITHM = cmd.split(" ")[1]
+                print(f"Set algorithm to {ALGORITHM}")
+            else:
+                print(f"Invalid algorithm. Valid algorithms: {algos}")
+        elif cmd == "set -v":
             VERBOSE = not VERBOSE
             print(f"Set verbose to {VERBOSE}")
+        elif cmd == "reset":
+            FLOORS = 5
+            ELEVATORS = 1
+            PEOPLE = 10
+            ALGORITHM = "random"
+            VERBOSE = False
+            print("Reset all variables")
+
+        elif cmd == "inputs":
+            print("Floors: {}".format(FLOORS))
+            print("Elevators: {}".format(ELEVATORS))
+            print("People: {}".format(PEOPLE))
+            print("Algorithm: {}".format(ALGORITHM))
         elif cmd == "help":
             print("Commands:")
             print("run: run the simulation")
-            print("exit: exit the program")
-            print("-f [FLOORS]: change the number of floors")
-            print("-e [ELEVATORS]: change the number of elevators")
-            print("-p [PEOPLE]: change the number of people")
-            print("-a [ALGORITHM]: change the scheduling algorithm")
-            print("-v: toggle verbose output")
+            print("inputs: print the current inputs")
+            print("reset: reset the inputs to default")
+            print("set -f [FLOORS]: change the number of floors")
+            print("set -e [ELEVATORS]: change the number of elevators")
+            print("set -p [PEOPLE]: change the number of people")
+            print("set -a [ALGORITHM]: change the scheduling algorithm")
+            print("set -v: toggle verbose output")
             print("help: print this help message")
+            print("exit: exit the program")
         else:
             print("Invalid command")
 

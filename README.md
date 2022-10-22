@@ -20,6 +20,13 @@ python main.py -f [FLOORS] -e [ELEVATORS] -p [PASSENGERS] -a [ALGORITHM]
 - `-a` or `--algorithm` - Algorithm to use for elevator scheduling
 - `-v` or `--verbose` - Verbose mode
 
+### Commands
+- `help` - Show help
+- `exit` - Exit the program
+- `run` - Run the simulation
+- `reset` - Reset the simulation
+- `set` - Set a variable
+
 ### Algorithms
 - [ ] `fcfs` - First Come First Serve
 - [ ] `lifo` - Last In First Out (Not implemented)
