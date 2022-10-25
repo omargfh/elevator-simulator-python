@@ -6,10 +6,11 @@ import asyncio
 from helpers import setTimeout, cprint, timestamp
 from constants import *
 
-TERMINATE = [False, False]
+TERMINATE = [False, False, False]
 floors = []
 probability = None
 building = None
+elevators = None
 
 class VirtualTime():
     def __init__(self):
@@ -62,7 +63,7 @@ class Probability():
             values.append(value)
         return values
 
-class Passenger():
+class Passenger(object):
     def __init__(self, id, start, end, random=random):
         self.id = id
         self.origin = start
@@ -99,12 +100,18 @@ class Passenger():
 
     def move(self):
         self.destination = list(filter(lambda x: x != self.origin, probability.rand_unique(2, default=self.origin)))[0]
-        print(f'Passenger {self.id} moved from {self.origin} to {self.destination}')
+        print(f'Passenger {self.id} decided to go from {self.origin} to {self.destination}')
 
     def run(self):
+        direction = 1 if self.origin < self.destination else (-1 if self.origin > self.destination else 0)
+        if (direction == 1 and not floors[self.origin].called_up):
+            floors[self.origin].call_up()
+        elif (direction == -1 and not floors[self.origin].called_down):
+            floors[self.origin].call_down()
+
         while self.origin != self.destination:
             continue
-        time_to_move = self.random() / 100
+        time_to_move = self.random()
         setTimeout(time_to_move, self.move)
 
 class Floor(object):
@@ -123,10 +130,26 @@ class Floor(object):
     def remove_passenger(self, passenger):
         passenger in self.passengers and self.passengers.remove(passenger)
 
+    def call_up(self):
+        self.called_up = True
+        print(f'Floor {self.floor} called up')
+
+    def call_down(self):
+        self.called_down = True
+        print(f'Floor {self.floor} called down')
+
+    def uncall(self):
+        self.called_up = False
+        self.called_down = False
+
+    def print_summary(self):
+        print(f'Floor {self.floor} has {len(self.passengers)} passengers and floor is called up: {self.called_up} and called down: {self.called_down}')
+
     def check_floor(self):
+        available_passengers = [x for x in self.passengers if x.origin == self.floor and x.destination != self.floor]
         return {
-            "len": len(self.passengers),
-            "passengers": self.passengers
+            "len": len(available_passengers),
+            "passengers": available_passengers
         }
 
 class Elevator(object):
@@ -182,17 +205,20 @@ class Elevator(object):
                 self.sleep(self.passenger_idle_time)
 
     def load_passengers(self, passengers, capacity):
+        length = 0
         while True:
-            if len(passengers) == 0:
+            if (len(passengers) == 0):
                 break
             if (self.capacity - len(self.passenagers)) == 0:
                 break
             passenger = passengers.pop()
             if passenger.origin == self.current_floor:
+                length += 1
                 self.passenagers.add(passenger)
                 floors[passenger.origin].remove_passenger(passenger)
                 self.add_to_queue(passenger.destination)
                 print("ELEVATOR ROUTINE {}: Loaded passenger {} on floor {}".format(self.id, passenger.id, self.current_floor))
+        return length
 
     def dequeue_current_floor(self):
         if self.current_floor in self.queue:
@@ -222,30 +248,47 @@ class Elevator(object):
     # 5. Move to next floor
     # 6. Repeat from 1
     def execute_floor_move(self):
+        # Debug Information
         cprint(f'DEBUG INFO: Elevator {self.id} has queue {self.queue}', 'yellow')
         cprint(f'DEBUG INFO: Elevator {self.id} has {len(self.passenagers)} passengers', 'yellow')
         cprint(f'DEBUG INFO: Elevator {self.id} has current floor {self.current_floor}', 'yellow')
         cprint(f'DEBUG INFO: Elevator {self.id} has direction {self.direction}', 'yellow')
         cprint(f'DEBUG INFO: Elevator {self.id} has available {self.available}', 'yellow')
+
+        # Open door
         self.open_door(self.door_delay)
         cprint(f'ELEVATOR {self.id}: Door opened on floor {self.current_floor}', 'red')
+
+        # Drop passengers
+        dropped_count = sum([1 for passenger in self.passenagers if passenger.destination == self.current_floor])
         self.drop_passengers()
-        cprint(f'ELEVATOR {self.id}: Dropped passengers on floor {self.current_floor}', 'red')
+        cprint(f'ELEVATOR {self.id}: Dropped {dropped_count} passengers on floor {self.current_floor}', 'red')
+
+        # Load passengers
         checked_floor = floors[self.current_floor].check_floor()
         if (checked_floor['len'] > 0):
             remaining_capacity = self.capacity - len(self.passenagers)
             if (remaining_capacity > 0):
+
                 cprint(f'ELEVATOR {self.id}: Found {checked_floor["len"]} passengers on floor {self.current_floor}', 'red')
-                self.load_passengers(checked_floor['passengers'], remaining_capacity)
-                remaining_capacity = self.capacity - min(remaining_capacity, len(self.passenagers))
+                loaded = self.load_passengers(checked_floor['passengers'], remaining_capacity)
+
+                remaining_capacity = self.capacity - min(remaining_capacity, len(self.passenagers))                          # this might fail if integrity is violated
                 if (not remaining_capacity == (self.capacity - len(self.passenagers))):
                     cprint(f'DEBUG IN ELEVATOR {self.id}: Integrity check violated on floor {self.current_floor}', 'yellow')
-                cprint(f'ELEVATOR {self.id}: Loaded passengers on floor {self.current_floor}', 'red')
-                cprint(f'ELEVATOR {self.id}: Loaded {len(self.passenagers)} passengers on floor {self.current_floor}', 'red')
+
+                # log information
+                cprint(f'ELEVATOR {self.id}: Loaded {loaded} passengers on floor {self.current_floor}', 'red')
                 cprint(f'ELEVATOR {self.id}: Remaining capacity {remaining_capacity} on floor {self.current_floor}', 'red')
+
+        # Close door
         self.close_door(self.door_delay)
         cprint(f'ELEVATOR {self.id}: Door closed on floor {self.current_floor}', 'red')
+
+        # Dequeue current floor
         self.dequeue_current_floor()
+
+        # Move to next floor
         if (len(self.queue) > 0):
             self.sleep(self.speed)
             self.current_floor = self.next_floor()
@@ -337,6 +380,13 @@ class Elevators(object):
 
     def simulate(self):
         while True:
+            for floor in floors:
+                called = floor.called_up or floor.called_down
+                floor.uncall()
+                floor = floor.floor
+                if ((not floor in self.waiting) and called):
+                    self.waiting.add(floor)
+                    self.handle_call_logic(floor)
             cprint("DEBUG | WAITING: {}".format(self.waiting), "yellow")
             cprint("DEBUG | QUEUED: {}".format(self.queued), "yellow")
             if (len(self.waiting) > 0):
@@ -406,6 +456,9 @@ class Buliding(object):
     def simulate(self):
         for i in range(self.passenger_count):
             self.new_passenger()
+        # print summary of each floor
+        for floor in self.floors:
+            floor.print_summary()
         TERMINATE[0] = True
 
     async def run_dispatcher(self):
@@ -414,6 +467,7 @@ class Buliding(object):
         for elevator in self.elevators.elevators:
             setTimeout(0.01, elevator.run)
         while True:
+            # check if all passengers are done
             if (all(TERMINATE)):
                 break
             await asyncio.sleep(1)
@@ -426,12 +480,16 @@ class Buliding(object):
         LOOP.close()
 
 def run():
+    cprint(f'---- ELEVATOR SIMULATOR ----', 'cyan');
     # Create a Building instance
     global building
     building = Buliding(FLOORS, ELEVATORS, PEOPLE)
     # Expose floors
     global floors
     floors = building.floors
+    # expose elevators
+    global elevators
+    elevators = building.elevators
     # Expose probability
     global probability
     probability = Probability(PROBABILITY)

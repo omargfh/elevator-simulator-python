@@ -1,0 +1,1806 @@
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4311105744 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DEBUG | WAITING: set()
+DECLARATION: Passenger 4311105744 created
+BUILDING: New passenger 4311105744 from floor 1 to floor 4
+DEBUG | QUEUED: set()
+BUILDING: Passenger 4311105744 added to floor 1
+ELEVATORS: No waiting calls
+BUILDING: Elevator called to floor 1
+DECLARATION: Passenger 4311105776 created
+BUILDING: New passenger 4311105776 from floor 1 to floor 3
+BUILDING: Passenger 4311105776 added to floor 1
+DEBUG | WAITING: {1}
+DECLARATION: Passenger 4311105808 created
+DEBUG | QUEUED: set()
+BUILDING: New passenger 4311105808 from floor 1 to floor 2
+ELEVATORS: Found elevator 4311105744 for floor 1
+DEBUG INFO: Elevator 4311105744 has queue [1]
+BUILDING: Passenger 4311105808 added to floor 1
+DEBUG INFO: Elevator 4311105744 has 0 passengers
+DEBUG INFO: Elevator 4311105744 has current floor 1
+DEBUG INFO: Elevator 4311105744 has direction 1
+DEBUG INFO: Elevator 4311105744 has available False
+ELEVATOR 4311105744: Door opened on floor 1
+ELEVATOR 4311105744: Dropped passengers on floor 1
+ELEVATOR 4311105744: Found 3 passengers on floor 1
+ELEVATOR 4311105744: Loaded passengers on floor 1
+ELEVATOR 4311105744: Loaded 3 passengers on floor 1
+ELEVATOR 4311105744: Remaining capacity 97 on floor 1
+ELEVATOR 4311105744: Door closed on floor 1
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4311105744 has queue [3, 4, 2]
+DECLARATION: Passenger 4311105840 created
+DEBUG | QUEUED: {1}
+BUILDING: New passenger 4311105840 from floor 1 to floor 3
+DEBUG INFO: Elevator 4311105744 has 3 passengers
+ELEVATORS: No waiting calls
+DEBUG INFO: Elevator 4311105744 has current floor 2
+DEBUG INFO: Elevator 4311105744 has direction 1
+BUILDING: Passenger 4311105840 added to floor 1
+DEBUG INFO: Elevator 4311105744 has available False
+DECLARATION: Passenger 4311105872 created
+BUILDING: New passenger 4311105872 from floor 1 to floor 3
+ELEVATOR 4311105744: Door opened on floor 2
+BUILDING: Passenger 4311105872 added to floor 1
+ELEVATOR 4311105744: Dropped passengers on floor 2
+ELEVATOR 4311105744: Found 1 passengers on floor 2
+DECLARATION: Passenger 4311105904 created
+ELEVATOR 4311105744: Loaded passengers on floor 2
+BUILDING: New passenger 4311105904 from floor 1 to floor 3
+ELEVATOR 4311105744: Loaded 3 passengers on floor 2
+BUILDING: Passenger 4311105904 added to floor 1
+ELEVATOR 4311105744: Remaining capacity 97 on floor 2
+DEBUG | WAITING: set()
+ELEVATOR 4311105744: Door closed on floor 2
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG INFO: Elevator 4311105744 has queue [3, 4, 1]
+DEBUG INFO: Elevator 4311105744 has 3 passengers
+DEBUG INFO: Elevator 4311105744 has current floor 1
+DEBUG INFO: Elevator 4311105744 has direction 1
+DECLARATION: Passenger 4311105936 created
+BUILDING: New passenger 4311105936 from floor 1 to floor 2
+DEBUG INFO: Elevator 4311105744 has available False
+ELEVATOR 4311105744: Door opened on floor 1
+BUILDING: Passenger 4311105936 added to floor 1
+BUILDING: Passenger 4311105808 removed from building
+DECLARATION: Passenger 4311105936 created
+ELEVATOR 4311105744: Dropped passengers on floor 1
+DEBUG | WAITING: set()
+BUILDING: New passenger 4311105936 from floor 1 to floor 2
+ELEVATOR 4311105744: Found 4 passengers on floor 1
+DEBUG | QUEUED: {1}
+BUILDING: Passenger 4311105936 added to floor 1
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4311105968 created
+ELEVATOR 4311105744: Loaded passengers on floor 1
+ELEVATOR 4311105744: Loaded 7 passengers on floor 1
+BUILDING: New passenger 4311105968 from floor 1 to floor 3
+BUILDING: Passenger 4311105968 added to floor 1
+ELEVATOR 4311105744: Remaining capacity 93 on floor 1
+DECLARATION: Passenger 4311106000 created
+BUILDING: New passenger 4311106000 from floor 1 to floor 3
+ELEVATOR 4311105744: Door closed on floor 1
+BUILDING: Passenger 4311106000 added to floor 1
+DEBUG INFO: Elevator 4311105744 has queue [3, 4, 2]
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4311105744 has 7 passengers
+DEBUG | QUEUED: {1}
+DEBUG INFO: Elevator 4311105744 has current floor 2
+DEBUG INFO: Elevator 4311105744 has direction 1
+DEBUG INFO: Elevator 4311105744 has available False
+ELEVATOR 4311105744: Door opened on floor 2
+ELEVATOR 4311105744: Dropped passengers on floor 2
+ELEVATOR 4311105744: Found 2 passengers on floor 2
+ELEVATOR 4311105744: Loaded passengers on floor 2
+ELEVATOR 4311105744: Loaded 7 passengers on floor 2
+ELEVATOR 4311105744: Remaining capacity 93 on floor 2
+ELEVATOR 4311105744: Door closed on floor 2
+DEBUG INFO: Elevator 4311105744 has queue [3, 4, 1]
+DEBUG INFO: Elevator 4311105744 has 7 passengers
+DEBUG INFO: Elevator 4311105744 has current floor 1
+DEBUG INFO: Elevator 4311105744 has direction 1
+DEBUG INFO: Elevator 4311105744 has available False
+ELEVATOR 4311105744: Door opened on floor 1
+BUILDING: Passenger 4311105936 removed from building
+BUILDING: Passenger 4311105936 removed from building
+ELEVATOR 4311105744: Dropped passengers on floor 1
+ELEVATOR 4311105744: Found 2 passengers on floor 1
+ELEVATOR 4311105744: Loaded passengers on floor 1
+ELEVATOR 4311105744: Loaded 7 passengers on floor 1
+ELEVATOR 4311105744: Remaining capacity 93 on floor 1
+ELEVATOR 4311105744: Door closed on floor 1
+DEBUG INFO: Elevator 4311105744 has queue [3, 4]
+DEBUG INFO: Elevator 4311105744 has 7 passengers
+DEBUG INFO: Elevator 4311105744 has current floor 3
+DEBUG INFO: Elevator 4311105744 has direction 1
+DEBUG INFO: Elevator 4311105744 has available False
+ELEVATOR 4311105744: Door opened on floor 3
+ELEVATOR 4311105744: Dropped passengers on floor 3
+ELEVATOR 4311105744: Found 6 passengers on floor 3
+ELEVATOR 4311105744: Loaded passengers on floor 3
+ELEVATOR 4311105744: Loaded 7 passengers on floor 3
+ELEVATOR 4311105744: Remaining capacity 93 on floor 3
+ELEVATOR 4311105744: Door closed on floor 3
+DEBUG INFO: Elevator 4311105744 has queue [4, 1]
+DEBUG INFO: Elevator 4311105744 has 7 passengers
+DEBUG INFO: Elevator 4311105744 has current floor 1
+DEBUG INFO: Elevator 4311105744 has direction 1
+DEBUG INFO: Elevator 4311105744 has available False
+ELEVATOR 4311105744: Door opened on floor 1
+BUILDING: Passenger 4311105968 removed from building
+BUILDING: Passenger 4311105872 removed from building
+BUILDING: Passenger 4311106000 removed from building
+BUILDING: Passenger 4311105776 removed from building
+BUILDING: Passenger 4311105904 removed from building
+BUILDING: Passenger 4311105840 removed from building
+ELEVATOR 4311105744: Dropped passengers on floor 1
+ELEVATOR 4311105744: Door closed on floor 1
+DEBUG INFO: Elevator 4311105744 has queue [4]
+DEBUG INFO: Elevator 4311105744 has 1 passengers
+DEBUG INFO: Elevator 4311105744 has current floor 4
+DEBUG INFO: Elevator 4311105744 has direction 1
+DEBUG INFO: Elevator 4311105744 has available False
+ELEVATOR 4311105744: Door opened on floor 4
+ELEVATOR 4311105744: Dropped passengers on floor 4
+ELEVATOR 4311105744: Found 1 passengers on floor 4
+ELEVATOR 4311105744: Loaded passengers on floor 4
+ELEVATOR 4311105744: Loaded 1 passengers on floor 4
+ELEVATOR 4311105744: Remaining capacity 99 on floor 4
+ELEVATOR 4311105744: Door closed on floor 4
+ELEVATOR 4311105744: Elevator is now idle
+ELEVATOR 4311105744: Moving to floor 4
+ELEVATOR 4311105744: Moving to floor 4
+ELEVATOR 4311105744: Moving to floor 4
+ELEVATOR 4311105744: Moving to floor 4
+ELEVATOR 4311105744: Moving to floor 4
+ELEVATOR 4311105744: Moving to floor 4
+ELEVATOR 4311105744: Moving to floor 4
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4335763664 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DEBUG | WAITING: set()
+DECLARATION: Passenger 4335763664 created
+DEBUG | QUEUED: set()
+BUILDING: New passenger 4335763664 from floor 1 to floor 4
+ELEVATORS: No waiting calls
+BUILDING: Passenger 4335763664 added to floor 1
+BUILDING: Elevator called to floor 1
+DECLARATION: Passenger 4335763696 created
+BUILDING: New passenger 4335763696 from floor 1 to floor 3
+BUILDING: Passenger 4335763696 added to floor 1
+DEBUG | WAITING: {1}
+DEBUG | QUEUED: set()
+ELEVATORS: Found elevator 4335763664 for floor 1
+DEBUG INFO: Elevator 4335763664 has queue [1]
+DEBUG INFO: Elevator 4335763664 has 0 passengers
+DEBUG INFO: Elevator 4335763664 has current floor 1
+DECLARATION: Passenger 4335763728 created
+DEBUG INFO: Elevator 4335763664 has direction 1
+BUILDING: New passenger 4335763728 from floor 1 to floor 3
+DEBUG INFO: Elevator 4335763664 has available False
+ELEVATOR 4335763664: Door opened on floor 1
+BUILDING: Passenger 4335763728 added to floor 1
+ELEVATOR 4335763664: Dropped 0 passengers on floor 1
+DECLARATION: Passenger 4335763760 created
+ELEVATOR 4335763664: Found 3 passengers on floor 1
+BUILDING: New passenger 4335763760 from floor 1 to floor 3
+ELEVATOR 4335763664: Loaded passengers on floor 1
+ELEVATOR 4335763664: Loaded 3 passengers on floor 1
+ELEVATOR 4335763664: Remaining capacity 97 on floor 1
+BUILDING: Passenger 4335763760 added to floor 1
+ELEVATOR 4335763664: Door closed on floor 1
+DEBUG INFO: Elevator 4335763664 has queue [4, 3]
+DEBUG INFO: Elevator 4335763664 has 3 passengers
+DEBUG INFO: Elevator 4335763664 has current floor 3
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4335763664 has direction 1
+DEBUG | QUEUED: {1}
+DEBUG INFO: Elevator 4335763664 has available False
+ELEVATORS: No waiting calls
+ELEVATOR 4335763664: Door opened on floor 3
+ELEVATOR 4335763664: Dropped 0 passengers on floor 3
+ELEVATOR 4335763664: Found 2 passengers on floor 3
+ELEVATOR 4335763664: Loaded passengers on floor 3
+ELEVATOR 4335763664: Loaded 3 passengers on floor 3
+ELEVATOR 4335763664: Remaining capacity 97 on floor 3
+DECLARATION: Passenger 4335763792 created
+ELEVATOR 4335763664: Door closed on floor 3
+BUILDING: New passenger 4335763792 from floor 1 to floor 3
+BUILDING: Passenger 4335763792 added to floor 1
+DEBUG INFO: Elevator 4335763664 has queue [4, 1]
+DEBUG INFO: Elevator 4335763664 has 3 passengers
+DEBUG INFO: Elevator 4335763664 has current floor 1
+DEBUG INFO: Elevator 4335763664 has direction 1
+DEBUG INFO: Elevator 4335763664 has available False
+ELEVATOR 4335763664: Door opened on floor 1
+BUILDING: Passenger 4335763696 removed from building
+DEBUG | WAITING: set()
+ELEVATOR 4335763664: Dropped 0 passengers on floor 1
+DEBUG | QUEUED: {1}
+ELEVATOR 4335763664: Found 2 passengers on floor 1
+ELEVATOR 4335763664: Loaded passengers on floor 1
+ELEVATORS: No waiting calls
+ELEVATOR 4335763664: Loaded 4 passengers on floor 1
+DECLARATION: Passenger 4335763792 created
+BUILDING: New passenger 4335763792 from floor 1 to floor 3
+ELEVATOR 4335763664: Remaining capacity 96 on floor 1
+BUILDING: Passenger 4335763792 added to floor 1
+ELEVATOR 4335763664: Door closed on floor 1
+DEBUG INFO: Elevator 4335763664 has queue [4, 3]
+DEBUG INFO: Elevator 4335763664 has 4 passengers
+DEBUG INFO: Elevator 4335763664 has current floor 3
+DEBUG INFO: Elevator 4335763664 has direction 1
+DEBUG INFO: Elevator 4335763664 has available False
+ELEVATOR 4335763664: Door opened on floor 3
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4335763824 created
+ELEVATOR 4335763664: Dropped 0 passengers on floor 3
+ELEVATOR 4335763664: Found 2 passengers on floor 3
+BUILDING: New passenger 4335763824 from floor 1 to floor 4
+BUILDING: Passenger 4335763824 added to floor 1
+ELEVATOR 4335763664: Loaded passengers on floor 3
+DECLARATION: Passenger 4335763856 created
+ELEVATOR 4335763664: Loaded 4 passengers on floor 3
+BUILDING: New passenger 4335763856 from floor 1 to floor 4
+ELEVATOR 4335763664: Remaining capacity 96 on floor 3
+BUILDING: Passenger 4335763856 added to floor 1
+ELEVATOR 4335763664: Door closed on floor 3
+DECLARATION: Passenger 4335763888 created
+DEBUG INFO: Elevator 4335763664 has queue [4, 2, 1]
+BUILDING: New passenger 4335763888 from floor 1 to floor 4
+DEBUG INFO: Elevator 4335763664 has 4 passengers
+BUILDING: Passenger 4335763888 added to floor 1
+DEBUG INFO: Elevator 4335763664 has current floor 1
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4335763664 has direction 1
+DEBUG | QUEUED: {1}
+DEBUG INFO: Elevator 4335763664 has available False
+ELEVATOR 4335763664: Door opened on floor 1
+ELEVATORS: No waiting calls
+BUILDING: Passenger 4335763792 removed from building
+ELEVATOR 4335763664: Dropped 0 passengers on floor 1
+ELEVATOR 4335763664: Found 4 passengers on floor 1
+DECLARATION: Passenger 4335763888 created
+ELEVATOR 4335763664: Loaded passengers on floor 1
+BUILDING: New passenger 4335763888 from floor 1 to floor 4
+ELEVATOR 4335763664: Loaded 7 passengers on floor 1
+ELEVATOR 4335763664: Remaining capacity 93 on floor 1
+BUILDING: Passenger 4335763888 added to floor 1
+DEBUG | WAITING: set()
+ELEVATOR 4335763664: Door closed on floor 1
+DEBUG | QUEUED: {1}
+DEBUG INFO: Elevator 4335763664 has queue [4, 2, 3]
+ELEVATORS: No waiting calls
+DEBUG INFO: Elevator 4335763664 has 7 passengers
+DEBUG INFO: Elevator 4335763664 has current floor 2
+DEBUG INFO: Elevator 4335763664 has direction 1
+DEBUG INFO: Elevator 4335763664 has available False
+ELEVATOR 4335763664: Door opened on floor 2
+ELEVATOR 4335763664: Dropped 0 passengers on floor 2
+DEBUG | WAITING: set()
+ELEVATOR 4335763664: Door closed on floor 2
+DEBUG | QUEUED: {1}
+DEBUG INFO: Elevator 4335763664 has queue [4, 3]
+DEBUG INFO: Elevator 4335763664 has 6 passengers
+DEBUG INFO: Elevator 4335763664 has current floor 3
+DEBUG INFO: Elevator 4335763664 has direction 1
+DEBUG INFO: Elevator 4335763664 has available False
+ELEVATOR 4335763664: Door opened on floor 3
+ELEVATOR 4335763664: Dropped 0 passengers on floor 3
+ELEVATOR 4335763664: Found 1 passengers on floor 3
+ELEVATOR 4335763664: Loaded passengers on floor 3
+ELEVATOR 4335763664: Loaded 6 passengers on floor 3
+ELEVATOR 4335763664: Remaining capacity 94 on floor 3
+ELEVATOR 4335763664: Door closed on floor 3
+DEBUG INFO: Elevator 4335763664 has queue [4]
+DEBUG INFO: Elevator 4335763664 has 6 passengers
+DEBUG INFO: Elevator 4335763664 has current floor 4
+DEBUG INFO: Elevator 4335763664 has direction 1
+DEBUG INFO: Elevator 4335763664 has available False
+ELEVATOR 4335763664: Door opened on floor 4
+ELEVATOR 4335763664: Dropped 0 passengers on floor 4
+ELEVATOR 4335763664: Found 4 passengers on floor 4
+ELEVATOR 4335763664: Loaded passengers on floor 4
+ELEVATOR 4335763664: Loaded 4 passengers on floor 4
+ELEVATOR 4335763664: Remaining capacity 96 on floor 4
+ELEVATOR 4335763664: Door closed on floor 4
+DEBUG INFO: Elevator 4335763664 has queue [1, 2]
+DEBUG INFO: Elevator 4335763664 has 4 passengers
+DEBUG INFO: Elevator 4335763664 has current floor 1
+DEBUG INFO: Elevator 4335763664 has direction 1
+DEBUG INFO: Elevator 4335763664 has available False
+ELEVATOR 4335763664: Door opened on floor 1
+BUILDING: Passenger 4335763888 removed from building
+BUILDING: Passenger 4335763664 removed from building
+BUILDING: Passenger 4335763856 removed from building
+ELEVATOR 4335763664: Dropped 0 passengers on floor 1
+ELEVATOR 4335763664: Found 1 passengers on floor 1
+ELEVATOR 4335763664: Loaded passengers on floor 1
+ELEVATOR 4335763664: Loaded 2 passengers on floor 1
+ELEVATOR 4335763664: Remaining capacity 98 on floor 1
+ELEVATOR 4335763664: Door closed on floor 1
+DEBUG INFO: Elevator 4335763664 has queue [2, 4]
+DEBUG INFO: Elevator 4335763664 has 2 passengers
+DEBUG INFO: Elevator 4335763664 has current floor 2
+DEBUG INFO: Elevator 4335763664 has direction 1
+DEBUG INFO: Elevator 4335763664 has available False
+ELEVATOR 4335763664: Door opened on floor 2
+ELEVATOR 4335763664: Dropped 0 passengers on floor 2
+ELEVATOR 4335763664: Door closed on floor 2
+DEBUG INFO: Elevator 4335763664 has queue [4]
+DEBUG INFO: Elevator 4335763664 has 1 passengers
+DEBUG INFO: Elevator 4335763664 has current floor 4
+DEBUG INFO: Elevator 4335763664 has direction 1
+DEBUG INFO: Elevator 4335763664 has available False
+ELEVATOR 4335763664: Door opened on floor 4
+ELEVATOR 4335763664: Dropped 0 passengers on floor 4
+ELEVATOR 4335763664: Door closed on floor 4
+ELEVATOR 4335763664: Elevator is now idle
+ELEVATOR 4335763664: Moving to floor 4
+ELEVATOR 4335763664: Moving to floor 4
+ELEVATOR 4335763664: Moving to floor 4
+ELEVATOR 4335763664: Moving to floor 4
+ELEVATOR 4335763664: Moving to floor 4
+ELEVATOR 4335763664: Moving to floor 4
+ELEVATOR 4335763664: Moving to floor 4
+ELEVATOR 4335763664: Moving to floor 4
+ELEVATOR 4335763664: Moving to floor 4
+ELEVATOR 4335763664: Moving to floor 4
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4310171856 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DEBUG | WAITING: set()
+DECLARATION: Passenger 4310171856 created
+DEBUG | QUEUED: set()
+BUILDING: New passenger 4310171856 from floor 1 to floor 4
+ELEVATORS: No waiting calls
+BUILDING: Passenger 4310171856 added to floor 1
+BUILDING: Elevator called to floor 1
+DEBUG | WAITING: {1}
+DEBUG | QUEUED: set()
+DECLARATION: Passenger 4310171888 created
+ELEVATORS: Found elevator 4310171856 for floor 1
+BUILDING: New passenger 4310171888 from floor 1 to floor 2
+DEBUG INFO: Elevator 4310171856 has queue [1]
+BUILDING: Passenger 4310171888 added to floor 1
+DEBUG INFO: Elevator 4310171856 has 0 passengers
+DECLARATION: Passenger 4310171920 created
+DEBUG INFO: Elevator 4310171856 has current floor 1
+BUILDING: New passenger 4310171920 from floor 1 to floor 4
+DEBUG INFO: Elevator 4310171856 has direction 1
+DEBUG INFO: Elevator 4310171856 has available False
+BUILDING: Passenger 4310171920 added to floor 1
+ELEVATOR 4310171856: Door opened on floor 1
+ELEVATOR 4310171856: Dropped 0 passengers on floor 1
+ELEVATOR 4310171856: Found 3 passengers on floor 1
+ELEVATOR 4310171856: Loaded passengers on floor 1
+ELEVATOR 4310171856: Loaded 3 passengers on floor 1
+ELEVATOR 4310171856: Remaining capacity 97 on floor 1
+ELEVATOR 4310171856: Door closed on floor 1
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4310171856 has queue [4, 2]
+DEBUG | QUEUED: {1}
+DEBUG INFO: Elevator 4310171856 has 3 passengers
+ELEVATORS: No waiting calls
+DEBUG INFO: Elevator 4310171856 has current floor 2
+DEBUG INFO: Elevator 4310171856 has direction 1
+DECLARATION: Passenger 4310171952 created
+DEBUG INFO: Elevator 4310171856 has available False
+BUILDING: New passenger 4310171952 from floor 1 to floor 4
+ELEVATOR 4310171856: Door opened on floor 2
+BUILDING: Passenger 4310171952 added to floor 1
+ELEVATOR 4310171856: Dropped 1 passengers on floor 2
+ELEVATOR 4310171856: Found 1 passengers on floor 2
+ELEVATOR 4310171856: Loaded passengers on floor 2
+ELEVATOR 4310171856: Loaded 3 passengers on floor 2
+ELEVATOR 4310171856: Remaining capacity 97 on floor 2
+ELEVATOR 4310171856: Door closed on floor 2
+DEBUG INFO: Elevator 4310171856 has queue [4, 3]
+DEBUG INFO: Elevator 4310171856 has 3 passengers
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4310171856 has current floor 3
+DEBUG | QUEUED: {1}
+DEBUG INFO: Elevator 4310171856 has direction 1
+ELEVATORS: No waiting calls
+DEBUG INFO: Elevator 4310171856 has available False
+ELEVATOR 4310171856: Door opened on floor 3
+DECLARATION: Passenger 4310171984 created
+ELEVATOR 4310171856: Dropped 1 passengers on floor 3
+BUILDING: New passenger 4310171984 from floor 1 to floor 2
+ELEVATOR 4310171856: Door closed on floor 3
+DEBUG INFO: Elevator 4310171856 has queue [4]
+BUILDING: Passenger 4310171984 added to floor 1
+DEBUG INFO: Elevator 4310171856 has 2 passengers
+DEBUG INFO: Elevator 4310171856 has current floor 4
+DEBUG INFO: Elevator 4310171856 has direction 1
+DEBUG INFO: Elevator 4310171856 has available False
+DEBUG | WAITING: set()
+ELEVATOR 4310171856: Door opened on floor 4
+DEBUG | QUEUED: {1}
+ELEVATOR 4310171856: Dropped 2 passengers on floor 4
+ELEVATORS: No waiting calls
+ELEVATOR 4310171856: Found 2 passengers on floor 4
+ELEVATOR 4310171856: Loaded passengers on floor 4
+ELEVATOR 4310171856: Loaded 2 passengers on floor 4
+ELEVATOR 4310171856: Remaining capacity 98 on floor 4
+DECLARATION: Passenger 4310172016 created
+BUILDING: New passenger 4310172016 from floor 1 to floor 4
+ELEVATOR 4310171856: Door closed on floor 4
+BUILDING: Passenger 4310172016 added to floor 1
+DEBUG INFO: Elevator 4310171856 has queue [1]
+DEBUG INFO: Elevator 4310171856 has 2 passengers
+DEBUG INFO: Elevator 4310171856 has current floor 1
+DEBUG INFO: Elevator 4310171856 has direction 1
+DEBUG INFO: Elevator 4310171856 has available False
+ELEVATOR 4310171856: Door opened on floor 1
+BUILDING: Passenger 4310171920 removed from building
+BUILDING: Passenger 4310171856 removed from building
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATOR 4310171856: Dropped 2 passengers on floor 1
+ELEVATOR 4310171856: Found 3 passengers on floor 1
+ELEVATORS: No waiting calls
+ELEVATOR 4310171856: Loaded passengers on floor 1
+ELEVATOR 4310171856: Loaded 3 passengers on floor 1
+ELEVATOR 4310171856: Remaining capacity 97 on floor 1
+DECLARATION: Passenger 4310171984 created
+ELEVATOR 4310171856: Door closed on floor 1
+BUILDING: New passenger 4310171984 from floor 1 to floor 4
+DEBUG INFO: Elevator 4310171856 has queue [4, 2]
+BUILDING: Passenger 4310171984 added to floor 1
+DEBUG INFO: Elevator 4310171856 has 3 passengers
+DECLARATION: Passenger 4310172016 created
+DEBUG INFO: Elevator 4310171856 has current floor 2
+BUILDING: New passenger 4310172016 from floor 1 to floor 4
+BUILDING: Passenger 4310172016 added to floor 1
+DEBUG INFO: Elevator 4310171856 has direction 1
+DEBUG INFO: Elevator 4310171856 has available False
+ELEVATOR 4310171856: Door opened on floor 2
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATOR 4310171856: Dropped 1 passengers on floor 2
+ELEVATORS: No waiting calls
+ELEVATOR 4310171856: Found 1 passengers on floor 2
+ELEVATOR 4310171856: Loaded passengers on floor 2
+ELEVATOR 4310171856: Loaded 3 passengers on floor 2
+ELEVATOR 4310171856: Remaining capacity 97 on floor 2
+ELEVATOR 4310171856: Door closed on floor 2
+DEBUG INFO: Elevator 4310171856 has queue [4, 1]
+DECLARATION: Passenger 4310172048 created
+DEBUG INFO: Elevator 4310171856 has 3 passengers
+DEBUG INFO: Elevator 4310171856 has current floor 1
+BUILDING: New passenger 4310172048 from floor 1 to floor 2
+DEBUG INFO: Elevator 4310171856 has direction 1
+BUILDING: Passenger 4310172048 added to floor 1
+DEBUG INFO: Elevator 4310171856 has available False
+DEBUG | WAITING: set()
+ELEVATOR 4310171856: Door opened on floor 1
+DEBUG | QUEUED: {1}
+BUILDING: Passenger 4310171984 removed from building
+ELEVATOR 4310171856: Dropped 1 passengers on floor 1
+ELEVATORS: No waiting calls
+ELEVATOR 4310171856: Found 3 passengers on floor 1
+ELEVATOR 4310171856: Loaded passengers on floor 1
+ELEVATOR 4310171856: Loaded 5 passengers on floor 1
+DECLARATION: Passenger 4310172048 created
+ELEVATOR 4310171856: Remaining capacity 95 on floor 1
+BUILDING: New passenger 4310172048 from floor 1 to floor 3
+ELEVATOR 4310171856: Door closed on floor 1
+DEBUG INFO: Elevator 4310171856 has queue [4, 2]
+BUILDING: Passenger 4310172048 added to floor 1
+DEBUG INFO: Elevator 4310171856 has 5 passengers
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4310171856 has current floor 2
+DEBUG INFO: Elevator 4310171856 has direction 1
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG INFO: Elevator 4310171856 has available False
+ELEVATOR 4310171856: Door opened on floor 2
+ELEVATOR 4310171856: Dropped 1 passengers on floor 2
+ELEVATOR 4310171856: Door closed on floor 2
+DEBUG INFO: Elevator 4310171856 has queue [4]
+DEBUG INFO: Elevator 4310171856 has 4 passengers
+DEBUG INFO: Elevator 4310171856 has current floor 4
+DEBUG INFO: Elevator 4310171856 has direction 1
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4310171856 has available False
+ELEVATOR 4310171856: Door opened on floor 4
+DEBUG | QUEUED: {1}
+ELEVATOR 4310171856: Dropped 4 passengers on floor 4
+ELEVATOR 4310171856: Door closed on floor 4
+ELEVATOR 4310171856: Elevator is now idle
+ELEVATOR 4310171856: Moving to floor 4
+ELEVATOR 4310171856: Moving to floor 4
+ELEVATOR 4310171856: Moving to floor 4
+ELEVATOR 4310171856: Moving to floor 4
+ELEVATOR 4310171856: Moving to floor 4
+ELEVATOR 4310171856: Moving to floor 4
+ELEVATOR 4310171856: Moving to floor 4
+ELEVATOR 4310171856: Moving to floor 4
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4303978704 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DEBUG | WAITING: set()
+DECLARATION: Passenger 4303978704 created
+DEBUG | QUEUED: set()
+ELEVATORS: No waiting calls
+BUILDING: New passenger 4303978704 from floor 1 to floor 2
+BUILDING: Passenger 4303978704 added to floor 1
+BUILDING: Elevator called to floor 1
+DEBUG | WAITING: {1}
+DEBUG | QUEUED: set()
+DECLARATION: Passenger 4303978736 created
+ELEVATORS: Found elevator 4303978704 for floor 1
+DEBUG INFO: Elevator 4303978704 has queue [1]
+BUILDING: New passenger 4303978736 from floor 1 to floor 3
+DEBUG INFO: Elevator 4303978704 has 0 passengers
+BUILDING: Passenger 4303978736 added to floor 1
+DEBUG INFO: Elevator 4303978704 has current floor 1
+DEBUG INFO: Elevator 4303978704 has direction 1
+DEBUG INFO: Elevator 4303978704 has available False
+ELEVATOR 4303978704: Door opened on floor 1
+ELEVATOR 4303978704: Dropped 0 passengers on floor 1
+ELEVATOR 4303978704: Found 2 passengers on floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4303978768 created
+BUILDING: New passenger 4303978768 from floor 1 to floor 3
+BUILDING: Passenger 4303978768 added to floor 1
+DEBUG | WAITING: set()
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4299309264 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Passenger 4299309264 created
+DEBUG | WAITING: set()
+BUILDING: New passenger 4299309264 from floor 1 to floor 3
+DEBUG | QUEUED: set()
+BUILDING: Passenger 4299309264 added to floor 1
+ELEVATORS: No waiting calls
+BUILDING: Elevator called to floor 1
+DEBUG | WAITING: {1}
+DECLARATION: Passenger 4299309296 created
+DEBUG | QUEUED: set()
+BUILDING: New passenger 4299309296 from floor 1 to floor 3
+ELEVATORS: Found elevator 4299309264 for floor 1
+BUILDING: Passenger 4299309296 added to floor 1
+DEBUG INFO: Elevator 4299309264 has queue [1]
+DEBUG INFO: Elevator 4299309264 has 0 passengers
+DEBUG INFO: Elevator 4299309264 has current floor 1
+DEBUG INFO: Elevator 4299309264 has direction 1
+DEBUG INFO: Elevator 4299309264 has available False
+ELEVATOR 4299309264: Door opened on floor 1
+ELEVATOR 4299309264: Dropped 0 passengers on floor 1
+ELEVATOR 4299309264: Found 2 passengers on floor 1
+DEBUG | WAITING: set()
+DECLARATION: Passenger 4299309328 created
+BUILDING: New passenger 4299309328 from floor 1 to floor 3
+DEBUG | QUEUED: {1}
+BUILDING: Passenger 4299309328 added to floor 1
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4299309360 created
+BUILDING: New passenger 4299309360 from floor 1 to floor 4
+BUILDING: Passenger 4299309360 added to floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+DECLARATION: Passenger 4299309392 created
+ELEVATORS: No waiting calls
+BUILDING: New passenger 4299309392 from floor 1 to floor 2
+BUILDING: Passenger 4299309392 added to floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+DECLARATION: Passenger 4299309424 created
+ELEVATORS: No waiting calls
+BUILDING: New passenger 4299309424 from floor 1 to floor 2
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4338204880 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DEBUG | WAITING: set()
+DECLARATION: Passenger 4338204880 created
+BUILDING: New passenger 4338204880 from floor 1 to floor 4
+DEBUG | QUEUED: set()
+ELEVATORS: No waiting calls
+BUILDING: Passenger 4338204880 added to floor 1
+BUILDING: Elevator called to floor 1
+DEBUG | WAITING: {1}
+DEBUG | QUEUED: set()
+DECLARATION: Passenger 4338204912 created
+ELEVATORS: Found elevator 4338204880 for floor 1
+DEBUG INFO: Elevator 4338204880 has queue [1]
+DEBUG INFO: Elevator 4338204880 has 0 passengers
+BUILDING: New passenger 4338204912 from floor 1 to floor 3
+DEBUG INFO: Elevator 4338204880 has current floor 1
+BUILDING: Passenger 4338204912 added to floor 1
+DEBUG INFO: Elevator 4338204880 has direction 1
+DECLARATION: Passenger 4338204944 created
+DEBUG INFO: Elevator 4338204880 has available False
+BUILDING: New passenger 4338204944 from floor 1 to floor 2
+ELEVATOR 4338204880: Door opened on floor 1
+ELEVATOR 4338204880: Dropped 0 passengers on floor 1
+BUILDING: Passenger 4338204944 added to floor 1
+ELEVATOR 4338204880: Found 3 passengers on floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4338204976 created
+BUILDING: New passenger 4338204976 from floor 1 to floor 3
+BUILDING: Passenger 4338204976 added to floor 1
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4309631184 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DEBUG | WAITING: set()
+DECLARATION: Passenger 4309631184 created
+DEBUG | QUEUED: set()
+BUILDING: New passenger 4309631184 from floor 1 to floor 4
+ELEVATORS: No waiting calls
+BUILDING: Passenger 4309631184 added to floor 1
+BUILDING: Elevator called to floor 1
+DEBUG | WAITING: {1}
+DEBUG | QUEUED: set()
+ELEVATORS: Found elevator 4309631184 for floor 1
+DECLARATION: Passenger 4309631216 created
+DEBUG INFO: Elevator 4309631184 has queue [1]
+BUILDING: New passenger 4309631216 from floor 1 to floor 2
+DEBUG INFO: Elevator 4309631184 has 0 passengers
+BUILDING: Passenger 4309631216 added to floor 1
+DEBUG INFO: Elevator 4309631184 has current floor 1
+DEBUG INFO: Elevator 4309631184 has direction 1
+DEBUG INFO: Elevator 4309631184 has available False
+ELEVATOR 4309631184: Door opened on floor 1
+ELEVATOR 4309631184: Dropped 0 passengers on floor 1
+ELEVATOR 4309631184: Found 2 passengers on floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4309631248 created
+BUILDING: New passenger 4309631248 from floor 1 to floor 2
+BUILDING: Passenger 4309631248 added to floor 1
+DECLARATION: Passenger 4309631280 created
+BUILDING: New passenger 4309631280 from floor 1 to floor 2
+BUILDING: Passenger 4309631280 added to floor 1
+DECLARATION: Passenger 4309631312 created
+BUILDING: New passenger 4309631312 from floor 1 to floor 3
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4334977232 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DEBUG | WAITING: set()
+DECLARATION: Passenger 4334977232 created
+DEBUG | QUEUED: set()
+BUILDING: New passenger 4334977232 from floor 1 to floor 2
+ELEVATORS: No waiting calls
+BUILDING: Passenger 4334977232 added to floor 1
+BUILDING: Elevator called to floor 1
+DECLARATION: Passenger 4334977264 created
+BUILDING: New passenger 4334977264 from floor 1 to floor 3
+BUILDING: Passenger 4334977264 added to floor 1
+DEBUG | WAITING: {1}
+DEBUG | QUEUED: set()
+DEBUG INFO: Elevator 4334977232 has queue [1]
+ELEVATORS: Found elevator 4334977232 for floor 1
+DECLARATION: Passenger 4334977296 created
+DEBUG INFO: Elevator 4334977232 has 0 passengers
+DEBUG INFO: Elevator 4334977232 has current floor 1
+BUILDING: New passenger 4334977296 from floor 1 to floor 4
+DEBUG INFO: Elevator 4334977232 has direction 1
+BUILDING: Passenger 4334977296 added to floor 1
+DECLARATION: Passenger 4334977328 created
+DEBUG INFO: Elevator 4334977232 has available False
+ELEVATOR 4334977232: Door opened on floor 1
+BUILDING: New passenger 4334977328 from floor 1 to floor 3
+ELEVATOR 4334977232: Dropped 0 passengers on floor 1
+BUILDING: Passenger 4334977328 added to floor 1
+ELEVATOR 4334977232: Found 4 passengers on floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4334977360 created
+BUILDING: New passenger 4334977360 from floor 1 to floor 4
+BUILDING: Passenger 4334977360 added to floor 1
+DEBUG | WAITING: set()
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4346593488 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DEBUG | WAITING: set()
+DECLARATION: Passenger 4346593488 created
+DEBUG | QUEUED: set()
+ELEVATORS: No waiting calls
+BUILDING: New passenger 4346593488 from floor 1 to floor 2
+BUILDING: Passenger 4346593488 added to floor 1
+BUILDING: Elevator called to floor 1
+DEBUG | WAITING: {1}
+DEBUG | QUEUED: set()
+ELEVATORS: Found elevator 4346593488 for floor 1
+DEBUG INFO: Elevator 4346593488 has queue [1]
+DECLARATION: Passenger 4346593520 created
+BUILDING: New passenger 4346593520 from floor 1 to floor 4
+DEBUG INFO: Elevator 4346593488 has 0 passengers
+BUILDING: Passenger 4346593520 added to floor 1
+DEBUG INFO: Elevator 4346593488 has current floor 1
+DECLARATION: Passenger 4346593552 created
+DEBUG INFO: Elevator 4346593488 has direction 1
+DEBUG INFO: Elevator 4346593488 has available False
+BUILDING: New passenger 4346593552 from floor 1 to floor 3
+ELEVATOR 4346593488: Door opened on floor 1
+BUILDING: Passenger 4346593552 added to floor 1
+ELEVATOR 4346593488: Dropped 0 passengers on floor 1
+DECLARATION: Passenger 4346593584 created
+ELEVATOR 4346593488: Found 3 passengers on floor 1
+ELEVATOR 4346593488: Loaded 3 passengers on floor 1
+ELEVATOR 4346593488: Remaining capacity 97 on floor 1
+BUILDING: New passenger 4346593584 from floor 1 to floor 4
+ELEVATOR 4346593488: Door closed on floor 1
+BUILDING: Passenger 4346593584 added to floor 1
+DEBUG INFO: Elevator 4346593488 has queue [4, 2, 3]
+DEBUG INFO: Elevator 4346593488 has 3 passengers
+DEBUG INFO: Elevator 4346593488 has current floor 2
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4346593488 has direction 1
+DEBUG INFO: Elevator 4346593488 has available False
+ELEVATOR 4346593488: Door opened on floor 2
+DEBUG | QUEUED: {1}
+ELEVATOR 4346593488: Dropped 1 passengers on floor 2
+ELEVATORS: No waiting calls
+ELEVATOR 4346593488: Door closed on floor 2
+DEBUG INFO: Elevator 4346593488 has queue [4, 3]
+DEBUG INFO: Elevator 4346593488 has 2 passengers
+DEBUG INFO: Elevator 4346593488 has current floor 3
+DECLARATION: Passenger 4346593616 created
+DEBUG INFO: Elevator 4346593488 has direction 1
+BUILDING: New passenger 4346593616 from floor 1 to floor 3
+DEBUG INFO: Elevator 4346593488 has available False
+BUILDING: Passenger 4346593616 added to floor 1
+ELEVATOR 4346593488: Door opened on floor 3
+ELEVATOR 4346593488: Dropped 1 passengers on floor 3
+ELEVATOR 4346593488: Door closed on floor 3
+DEBUG INFO: Elevator 4346593488 has queue [4]
+DEBUG INFO: Elevator 4346593488 has 1 passengers
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4346593488 has current floor 4
+DEBUG INFO: Elevator 4346593488 has direction 1
+DEBUG | QUEUED: {1}
+DEBUG INFO: Elevator 4346593488 has available False
+ELEVATORS: No waiting calls
+ELEVATOR 4346593488: Door opened on floor 4
+ELEVATOR 4346593488: Dropped 1 passengers on floor 4
+ELEVATOR 4346593488: Door closed on floor 4
+ELEVATOR 4346593488: Elevator is now idle
+ELEVATOR 4346593488: Moving to floor 4
+ELEVATOR 4346593488: Moving to floor 4
+ELEVATOR 4346593488: Moving to floor 4
+DECLARATION: Passenger 4346593648 created
+BUILDING: New passenger 4346593648 from floor 1 to floor 3
+BUILDING: Passenger 4346593648 added to floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4346593680 created
+BUILDING: New passenger 4346593680 from floor 1 to floor 2
+BUILDING: Passenger 4346593680 added to floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4346593712 created
+BUILDING: New passenger 4346593712 from floor 1 to floor 2
+BUILDING: Passenger 4346593712 added to floor 1
+DECLARATION: Passenger 4346593744 created
+BUILDING: New passenger 4346593744 from floor 1 to floor 4
+DEBUG | WAITING: set()
+BUILDING: Passenger 4346593744 added to floor 1
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4346593776 created
+DEBUG | WAITING: set()
+BUILDING: New passenger 4346593776 from floor 1 to floor 3
+DEBUG | QUEUED: {1}
+BUILDING: Passenger 4346593776 added to floor 1
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4368744656 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DEBUG | WAITING: set()
+DECLARATION: Passenger 4368744656 created
+DEBUG | QUEUED: set()
+BUILDING: New passenger 4368744656 from floor 1 to floor 3
+ELEVATORS: No waiting calls
+BUILDING: Passenger 4368744656 added to floor 1
+BUILDING: Elevator called to floor 1
+DEBUG | WAITING: {1}
+DEBUG | QUEUED: set()
+DECLARATION: Passenger 4368744688 created
+DEBUG INFO: Elevator 4368744656 has queue [1]
+ELEVATORS: Found elevator 4368744656 for floor 1
+BUILDING: New passenger 4368744688 from floor 1 to floor 3
+DEBUG INFO: Elevator 4368744656 has 0 passengers
+BUILDING: Passenger 4368744688 added to floor 1
+DEBUG INFO: Elevator 4368744656 has current floor 1
+DECLARATION: Passenger 4368744720 created
+DEBUG INFO: Elevator 4368744656 has direction 1
+BUILDING: New passenger 4368744720 from floor 1 to floor 4
+DEBUG INFO: Elevator 4368744656 has available False
+BUILDING: Passenger 4368744720 added to floor 1
+ELEVATOR 4368744656: Door opened on floor 1
+DECLARATION: Passenger 4368744752 created
+ELEVATOR 4368744656: Dropped 0 passengers on floor 1
+ELEVATOR 4368744656: Found 3 passengers on floor 1
+BUILDING: New passenger 4368744752 from floor 1 to floor 3
+ELEVATOR 4368744656: Loaded 3 passengers on floor 1
+BUILDING: Passenger 4368744752 added to floor 1
+DECLARATION: Passenger 4368744784 created
+BUILDING: New passenger 4368744784 from floor 1 to floor 4
+ELEVATOR 4368744656: Remaining capacity 97 on floor 1
+ELEVATOR 4368744656: Door closed on floor 1
+BUILDING: Passenger 4368744784 added to floor 1
+DEBUG INFO: Elevator 4368744656 has queue [3, 4]
+DECLARATION: Passenger 4368744816 created
+DEBUG INFO: Elevator 4368744656 has 3 passengers
+BUILDING: New passenger 4368744816 from floor 1 to floor 3
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+DEBUG INFO: Elevator 4368744656 has current floor 3
+BUILDING: Passenger 4368744816 added to floor 1
+DEBUG INFO: Elevator 4368744656 has direction 1
+ELEVATORS: No waiting calls
+DEBUG INFO: Elevator 4368744656 has available False
+ELEVATOR 4368744656: Door opened on floor 3
+ELEVATOR 4368744656: Dropped 2 passengers on floor 3
+ELEVATOR 4368744656: Door closed on floor 3
+DEBUG INFO: Elevator 4368744656 has queue [4]
+DECLARATION: Passenger 4368744848 created
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4368744656 has 1 passengers
+BUILDING: New passenger 4368744848 from floor 1 to floor 2
+DEBUG | QUEUED: {1}
+DEBUG INFO: Elevator 4368744656 has current floor 4
+BUILDING: Passenger 4368744848 added to floor 1
+DEBUG INFO: Elevator 4368744656 has direction 1
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4368744880 created
+DEBUG INFO: Elevator 4368744656 has available False
+BUILDING: New passenger 4368744880 from floor 1 to floor 4
+ELEVATOR 4368744656: Door opened on floor 4
+BUILDING: Passenger 4368744880 added to floor 1
+ELEVATOR 4368744656: Dropped 1 passengers on floor 4
+ELEVATOR 4368744656: Door closed on floor 4
+ELEVATOR 4368744656: Elevator is now idle
+ELEVATOR 4368744656: Moving to floor 4
+DEBUG | WAITING: set()
+ELEVATOR 4368744656: Moving to floor 4
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4368744912 created
+BUILDING: New passenger 4368744912 from floor 1 to floor 3
+BUILDING: Passenger 4368744912 added to floor 1
+DECLARATION: Passenger 4368744944 created
+DEBUG | WAITING: set()
+BUILDING: New passenger 4368744944 from floor 1 to floor 4
+DEBUG | QUEUED: {1}
+BUILDING: Passenger 4368744944 added to floor 1
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4380115152 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Passenger 4380115152 created
+DEBUG | WAITING: set()
+DEBUG | QUEUED: set()
+BUILDING: New passenger 4380115152 from floor 1 to floor 3
+ELEVATORS: No waiting calls
+BUILDING: Passenger 4380115152 added to floor 1
+BUILDING: Elevator called to floor 1
+DEBUG | WAITING: {1}
+DECLARATION: Passenger 4380115184 created
+DEBUG | QUEUED: set()
+DEBUG INFO: Elevator 4380115152 has queue [1]
+BUILDING: New passenger 4380115184 from floor 1 to floor 3
+ELEVATORS: Found elevator 4380115152 for floor 1
+DEBUG INFO: Elevator 4380115152 has 0 passengers
+BUILDING: Passenger 4380115184 added to floor 1
+DEBUG INFO: Elevator 4380115152 has current floor 1
+DECLARATION: Passenger 4380115216 created
+DEBUG INFO: Elevator 4380115152 has direction 1
+DEBUG INFO: Elevator 4380115152 has available False
+BUILDING: New passenger 4380115216 from floor 1 to floor 3
+BUILDING: Passenger 4380115216 added to floor 1
+ELEVATOR 4380115152: Door opened on floor 1
+ELEVATOR 4380115152: Dropped 0 passengers on floor 1
+DECLARATION: Passenger 4380115248 created
+ELEVATOR 4380115152: Found 3 passengers on floor 1
+BUILDING: New passenger 4380115248 from floor 1 to floor 3
+ELEVATOR 4380115152: Loaded 3 passengers on floor 1
+BUILDING: Passenger 4380115248 added to floor 1
+ELEVATOR 4380115152: Remaining capacity 97 on floor 1
+ELEVATOR 4380115152: Door closed on floor 1
+DEBUG INFO: Elevator 4380115152 has queue [3]
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+DEBUG INFO: Elevator 4380115152 has 3 passengers
+ELEVATORS: No waiting calls
+DEBUG INFO: Elevator 4380115152 has current floor 3
+DEBUG INFO: Elevator 4380115152 has direction 1
+DEBUG INFO: Elevator 4380115152 has available False
+ELEVATOR 4380115152: Door opened on floor 3
+DECLARATION: Passenger 4380115280 created
+BUILDING: New passenger 4380115280 from floor 1 to floor 3
+ELEVATOR 4380115152: Dropped 3 passengers on floor 3
+BUILDING: Passenger 4380115280 added to floor 1
+ELEVATOR 4380115152: Door closed on floor 3
+DECLARATION: Passenger 4380115312 created
+ELEVATOR 4380115152: Elevator is now idle
+BUILDING: New passenger 4380115312 from floor 1 to floor 2
+ELEVATOR 4380115152: Moving to floor 3
+BUILDING: Passenger 4380115312 added to floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4380115344 created
+BUILDING: New passenger 4380115344 from floor 1 to floor 4
+BUILDING: Passenger 4380115344 added to floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4380115376 created
+BUILDING: New passenger 4380115376 from floor 1 to floor 4
+BUILDING: Passenger 4380115376 added to floor 1
+DECLARATION: Passenger 4380115408 created
+BUILDING: New passenger 4380115408 from floor 1 to floor 3
+DEBUG | WAITING: set()
+BUILDING: Passenger 4380115408 added to floor 1
+DEBUG | QUEUED: {1}
+DECLARATION: Passenger 4380115440 created
+BUILDING: New passenger 4380115440 from floor 1 to floor 3
+ELEVATORS: No waiting calls
+BUILDING: Passenger 4380115440 added to floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4335894736 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Passenger 4335894736 created
+BUILDING: New passenger 4335894736 from floor 1 to floor 2
+BUILDING: Passenger 4335894736 added to floor 1
+BUILDING: Elevator called to floor 1
+DECLARATION: Passenger 4335894768 created
+BUILDING: New passenger 4335894768 from floor 1 to floor 3
+BUILDING: Passenger 4335894768 added to floor 1
+DECLARATION: Passenger 4335894800 created
+BUILDING: New passenger 4335894800 from floor 1 to floor 3
+BUILDING: Passenger 4335894800 added to floor 1
+DEBUG | WAITING: {1}
+DEBUG | QUEUED: set()
+DEBUG INFO: Elevator 4335894736 has queue [1]
+ELEVATORS: Found elevator 4335894736 for floor 1
+DEBUG INFO: Elevator 4335894736 has 0 passengers
+DEBUG INFO: Elevator 4335894736 has current floor 1
+DEBUG INFO: Elevator 4335894736 has direction 1
+DEBUG INFO: Elevator 4335894736 has available False
+ELEVATOR 4335894736: Door opened on floor 1
+ELEVATOR 4335894736: Dropped 0 passengers on floor 1
+ELEVATOR 4335894736: Found 3 passengers on floor 1
+DECLARATION: Passenger 4335894832 created
+BUILDING: New passenger 4335894832 from floor 1 to floor 3
+ELEVATOR 4335894736: Loaded 3 passengers on floor 1
+ELEVATOR 4335894736: Remaining capacity 97 on floor 1
+BUILDING: Passenger 4335894832 added to floor 1
+ELEVATOR 4335894736: Door closed on floor 1
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4335894736 has queue [2, 3]
+DEBUG INFO: Elevator 4335894736 has 3 passengers
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG INFO: Elevator 4335894736 has current floor 2
+DEBUG INFO: Elevator 4335894736 has direction 1
+DEBUG INFO: Elevator 4335894736 has available False
+ELEVATOR 4335894736: Door opened on floor 2
+ELEVATOR 4335894736: Dropped 1 passengers on floor 2
+ELEVATOR 4335894736: Door closed on floor 2
+DECLARATION: Passenger 4335894864 created
+BUILDING: New passenger 4335894864 from floor 1 to floor 3
+DEBUG INFO: Elevator 4335894736 has queue [3]
+BUILDING: Passenger 4335894864 added to floor 1
+DEBUG INFO: Elevator 4335894736 has 2 passengers
+DECLARATION: Passenger 4335894896 created
+DEBUG INFO: Elevator 4335894736 has current floor 3
+BUILDING: New passenger 4335894896 from floor 1 to floor 2
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4335894736 has direction 1
+DEBUG | QUEUED: {1}
+BUILDING: Passenger 4335894896 added to floor 1
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4335894928 created
+DEBUG INFO: Elevator 4335894736 has available False
+BUILDING: New passenger 4335894928 from floor 1 to floor 4
+ELEVATOR 4335894736: Door opened on floor 3
+ELEVATOR 4335894736: Dropped 2 passengers on floor 3
+BUILDING: Passenger 4335894928 added to floor 1
+ELEVATOR 4335894736: Door closed on floor 3
+ELEVATOR 4335894736: Elevator is now idle
+ELEVATOR 4335894736: Moving to floor 3
+ELEVATOR 4335894736: Moving to floor 3
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+DECLARATION: Passenger 4335894960 created
+ELEVATORS: No waiting calls
+BUILDING: New passenger 4335894960 from floor 1 to floor 2
+BUILDING: Passenger 4335894960 added to floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4335894992 created
+BUILDING: New passenger 4335894992 from floor 1 to floor 2
+BUILDING: Passenger 4335894992 added to floor 1
+DECLARATION: Passenger 4335895024 created
+BUILDING: New passenger 4335895024 from floor 1 to floor 2
+DEBUG | WAITING: set()
+BUILDING: Passenger 4335895024 added to floor 1
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4313104592 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DEBUG | WAITING: set()
+DECLARATION: Passenger 4313104592 created
+DEBUG | QUEUED: set()
+BUILDING: New passenger 4313104592 from floor 1 to floor 2
+ELEVATORS: No waiting calls
+BUILDING: Passenger 4313104592 added to floor 1
+BUILDING: Elevator called to floor 1
+DEBUG | WAITING: {1}
+DEBUG | QUEUED: set()
+DECLARATION: Passenger 4313104624 created
+DEBUG INFO: Elevator 4313104592 has queue [1]
+BUILDING: New passenger 4313104624 from floor 1 to floor 3
+ELEVATORS: Found elevator 4313104592 for floor 1
+DEBUG INFO: Elevator 4313104592 has 0 passengers
+BUILDING: Passenger 4313104624 added to floor 1
+DEBUG INFO: Elevator 4313104592 has current floor 1
+DEBUG INFO: Elevator 4313104592 has direction 1
+DEBUG INFO: Elevator 4313104592 has available False
+ELEVATOR 4313104592: Door opened on floor 1
+ELEVATOR 4313104592: Dropped 0 passengers on floor 1
+ELEVATOR 4313104592: Found 2 passengers on floor 1
+ELEVATOR 4313104592: Loaded 2 passengers on floor 1
+ELEVATOR 4313104592: Remaining capacity 98 on floor 1
+ELEVATOR 4313104592: Door closed on floor 1
+DEBUG INFO: Elevator 4313104592 has queue [2, 3]
+DEBUG INFO: Elevator 4313104592 has 2 passengers
+DEBUG INFO: Elevator 4313104592 has current floor 2
+DEBUG INFO: Elevator 4313104592 has direction 1
+DEBUG INFO: Elevator 4313104592 has available False
+ELEVATOR 4313104592: Door opened on floor 2
+ELEVATOR 4313104592: Dropped 1 passengers on floor 2
+ELEVATOR 4313104592: Door closed on floor 2
+DEBUG INFO: Elevator 4313104592 has queue [3]
+DEBUG INFO: Elevator 4313104592 has 1 passengers
+DEBUG INFO: Elevator 4313104592 has current floor 3
+DEBUG INFO: Elevator 4313104592 has direction 1
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4313104592 has available False
+DECLARATION: Passenger 4313104656 created
+DEBUG | QUEUED: {1}
+ELEVATOR 4313104592: Door opened on floor 3
+BUILDING: New passenger 4313104656 from floor 1 to floor 4
+ELEVATORS: No waiting calls
+ELEVATOR 4313104592: Dropped 1 passengers on floor 3
+BUILDING: Passenger 4313104656 added to floor 1
+ELEVATOR 4313104592: Door closed on floor 3
+DECLARATION: Passenger 4313104688 created
+ELEVATOR 4313104592: Elevator is now idle
+BUILDING: New passenger 4313104688 from floor 1 to floor 2
+ELEVATOR 4313104592: Moving to floor 3
+BUILDING: Passenger 4313104688 added to floor 1
+ELEVATOR 4313104592: Moving to floor 3
+DECLARATION: Passenger 4313104720 created
+BUILDING: New passenger 4313104720 from floor 1 to floor 2
+BUILDING: Passenger 4313104720 added to floor 1
+DECLARATION: Passenger 4313104752 created
+BUILDING: New passenger 4313104752 from floor 1 to floor 3
+BUILDING: Passenger 4313104752 added to floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4313104784 created
+BUILDING: New passenger 4313104784 from floor 1 to floor 4
+BUILDING: Passenger 4313104784 added to floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4313104816 created
+BUILDING: New passenger 4313104816 from floor 1 to floor 3
+BUILDING: Passenger 4313104816 added to floor 1
+DECLARATION: Passenger 4313104848 created
+BUILDING: New passenger 4313104848 from floor 1 to floor 3
+BUILDING: Passenger 4313104848 added to floor 1
+DEBUG | WAITING: set()
+DECLARATION: Passenger 4313104880 created
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+BUILDING: New passenger 4313104880 from floor 1 to floor 4
+BUILDING: Passenger 4313104880 added to floor 1
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG | WAITING: set()
+DEBUG | QUEUED: {1}
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4339581136 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DEBUG | WAITING: set()
+DECLARATION: Passenger 4339581136 created
+DEBUG | QUEUED: set()
+ELEVATORS: No waiting calls
+BUILDING: New passenger 4339581136 from floor 1 to floor 4
+BUILDING: Passenger 4339581136 added to floor 1
+BUILDING: Elevator called to floor 1
+DEBUG INFO: Elevator 4339581136 has queue [<elevator.Floor object at 0x103706980>]
+DEBUG INFO: Elevator 4339581136 has 0 passengers
+DEBUG INFO: Elevator 4339581136 has current floor 1
+DECLARATION: Passenger 4339581168 created
+BUILDING: New passenger 4339581168 from floor 1 to floor 3
+DEBUG INFO: Elevator 4339581136 has direction 1
+BUILDING: Passenger 4339581168 added to floor 1
+DECLARATION: Passenger 4339581200 created
+DEBUG INFO: Elevator 4339581136 has available False
+ELEVATOR 4339581136: Door opened on floor 1
+BUILDING: New passenger 4339581200 from floor 1 to floor 3
+BUILDING: Passenger 4339581200 added to floor 1
+ELEVATOR 4339581136: Dropped 0 passengers on floor 1
+ELEVATOR 4339581136: Found 3 passengers on floor 1
+DECLARATION: Passenger 4339581232 created
+ELEVATOR 4339581136: Loaded 3 passengers on floor 1
+BUILDING: New passenger 4339581232 from floor 1 to floor 2
+ELEVATOR 4339581136: Remaining capacity 97 on floor 1
+BUILDING: Passenger 4339581232 added to floor 1
+ELEVATOR 4339581136: Door closed on floor 1
+DECLARATION: Passenger 4339581264 created
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4332880080 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Passenger 4332880080 created
+BUILDING: New passenger 4332880080 from floor 1 to floor 3
+BUILDING: Passenger 4332880080 added to floor 1
+BUILDING: Elevator called to floor 1
+DECLARATION: Passenger 4332880112 created
+BUILDING: New passenger 4332880112 from floor 1 to floor 2
+BUILDING: Passenger 4332880112 added to floor 1
+DECLARATION: Passenger 4332880144 created
+BUILDING: New passenger 4332880144 from floor 1 to floor 3
+BUILDING: Passenger 4332880144 added to floor 1
+DECLARATION: Passenger 4332880176 created
+BUILDING: New passenger 4332880176 from floor 1 to floor 2
+BUILDING: Passenger 4332880176 added to floor 1
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4380426448 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DEBUG | WAITING: set()
+DECLARATION: Passenger 4380426448 created
+BUILDING: New passenger 4380426448 from floor 1 to floor 3
+DEBUG | QUEUED: set()
+BUILDING: Passenger 4380426448 added to floor 1
+ELEVATORS: No waiting calls
+BUILDING: Elevator called to floor 1
+DECLARATION: Passenger 4380426480 created
+BUILDING: New passenger 4380426480 from floor 1 to floor 4
+BUILDING: Passenger 4380426480 added to floor 1
+DEBUG | WAITING: {1}
+DEBUG | QUEUED: set()
+ELEVATORS: Found elevator 4380426448 for floor 1
+DEBUG INFO: Elevator 4380426448 has queue [1]
+DECLARATION: Passenger 4380426512 created
+DEBUG INFO: Elevator 4380426448 has 0 passengers
+BUILDING: New passenger 4380426512 from floor 1 to floor 3
+BUILDING: Passenger 4380426512 added to floor 1
+DEBUG INFO: Elevator 4380426448 has current floor 1
+DEBUG INFO: Elevator 4380426448 has direction 1
+DEBUG INFO: Elevator 4380426448 has available False
+ELEVATOR 4380426448: Door opened on floor 1
+ELEVATOR 4380426448: Dropped 0 passengers on floor 1
+ELEVATOR 4380426448: Found 3 passengers on floor 1
+ELEVATOR 4380426448: Loaded 3 passengers on floor 1
+ELEVATOR 4380426448: Remaining capacity 97 on floor 1
+ELEVATOR 4380426448: Door closed on floor 1
+DEBUG | WAITING: {1}
+DEBUG INFO: Elevator 4380426448 has queue [3, 4]
+DEBUG | QUEUED: {1}
+ELEVATORS: Floor 1 is already queued
+DEBUG INFO: Elevator 4380426448 has 3 passengers
+DECLARATION: Passenger 4380426544 created
+DEBUG | WAITING: {1}
+DEBUG INFO: Elevator 4380426448 has current floor 3
+BUILDING: New passenger 4380426544 from floor 1 to floor 2
+DEBUG | QUEUED: {1}
+BUILDING: Passenger 4380426544 added to floor 1
+ELEVATORS: Floor 1 is already queued
+DEBUG INFO: Elevator 4380426448 has direction 1
+DECLARATION: Passenger 4380426576 created
+DEBUG | WAITING: {1}
+DEBUG INFO: Elevator 4380426448 has available False
+ELEVATOR 4380426448: Door opened on floor 3
+ELEVATOR 4380426448: Dropped 2 passengers on floor 3
+DEBUG | QUEUED: {1}
+BUILDING: New passenger 4380426576 from floor 1 to floor 4
+ELEVATOR 4380426448: Door closed on floor 3
+BUILDING: Passenger 4380426576 added to floor 1
+ELEVATORS: Floor 1 is already queued
+DEBUG INFO: Elevator 4380426448 has queue [4]
+DEBUG | WAITING: {1}
+DEBUG INFO: Elevator 4380426448 has 1 passengers
+DEBUG | QUEUED: {1}
+DEBUG INFO: Elevator 4380426448 has current floor 4
+DEBUG INFO: Elevator 4380426448 has direction 1
+DEBUG INFO: Elevator 4380426448 has available False
+ELEVATORS: Floor 1 is already queued
+ELEVATOR 4380426448: Door opened on floor 4
+DEBUG | WAITING: {1}
+ELEVATOR 4380426448: Dropped 1 passengers on floor 4
+ELEVATOR 4380426448: Door closed on floor 4
+DEBUG | QUEUED: {1}
+ELEVATOR 4380426448: Elevator is now idle
+ELEVATORS: Floor 1 is already queued
+DEBUG INFO: Elevator 4380426448 has queue [1]
+ELEVATOR 4380426448: Moving to floor 4
+DEBUG INFO: Elevator 4380426448 has 0 passengers
+ELEVATOR 4380426448: Moving to floor 4
+DEBUG INFO: Elevator 4380426448 has current floor 4
+DEBUG INFO: Elevator 4380426448 has queue [1]
+DEBUG INFO: Elevator 4380426448 has direction -1
+DEBUG INFO: Elevator 4380426448 has 0 passengers
+DEBUG INFO: Elevator 4380426448 has available False
+DEBUG INFO: Elevator 4380426448 has current floor 4
+DECLARATION: Passenger 4380426608 created
+ELEVATOR 4380426448: Door opened on floor 4
+BUILDING: New passenger 4380426608 from floor 1 to floor 3
+DEBUG INFO: Elevator 4380426448 has direction -1
+BUILDING: Passenger 4380426608 added to floor 1
+DEBUG INFO: Elevator 4380426448 has available False
+ELEVATOR 4380426448: Dropped 0 passengers on floor 4
+DECLARATION: Passenger 4380426640 created
+ELEVATOR 4380426448: Door opened on floor 4
+ELEVATOR 4380426448: Found 1 passengers on floor 4
+BUILDING: New passenger 4380426640 from floor 1 to floor 3
+ELEVATOR 4380426448: Dropped 0 passengers on floor 4
+ELEVATOR 4380426448: Loaded 1 passengers on floor 4
+ELEVATOR 4380426448: Remaining capacity 99 on floor 4
+ELEVATOR 4380426448: Door closed on floor 4
+BUILDING: Passenger 4380426640 added to floor 1
+ELEVATOR 4380426448: Door closed on floor 4
+DEBUG INFO: Elevator 4380426448 has queue [1, 2]
+DECLARATION: Passenger 4380426672 created
+DEBUG INFO: Elevator 4380426448 has queue [1]
+DEBUG INFO: Elevator 4380426448 has 1 passengers
+BUILDING: New passenger 4380426672 from floor 1 to floor 2
+DEBUG INFO: Elevator 4380426448 has current floor 1
+DEBUG INFO: Elevator 4380426448 has 1 passengers
+BUILDING: Passenger 4380426672 added to floor 1
+DEBUG INFO: Elevator 4380426448 has current floor 1
+DECLARATION: Passenger 4380426704 created
+DEBUG INFO: Elevator 4380426448 has direction -1
+DEBUG INFO: Elevator 4380426448 has direction -1
+BUILDING: New passenger 4380426704 from floor 1 to floor 2
+DEBUG INFO: Elevator 4380426448 has available False
+DEBUG INFO: Elevator 4380426448 has available False
+BUILDING: Passenger 4380426704 added to floor 1
+ELEVATOR 4380426448: Door opened on floor 1
+ELEVATOR 4380426448: Door opened on floor 1
+ELEVATOR 4380426448: Dropped 0 passengers on floor 1
+ELEVATOR 4380426448: Dropped 0 passengers on floor 1
+ELEVATOR 4380426448: Found 6 passengers on floor 1
+ELEVATOR 4380426448: Found 6 passengers on floor 1
+DECLARATION: Passenger 4380426736 created
+ELEVATOR 4380426448: Loaded 6 passengers on floor 1
+ELEVATOR 4380426448: Loaded 6 passengers on floor 1
+BUILDING: New passenger 4380426736 from floor 1 to floor 4
+ELEVATOR 4380426448: Remaining capacity 93 on floor 1
+ELEVATOR 4380426448: Remaining capacity 93 on floor 1
+BUILDING: Passenger 4380426736 added to floor 1
+ELEVATOR 4380426448: Door closed on floor 1
+DEBUG INFO: Elevator 4380426448 has queue [2, 3, 4]
+ELEVATOR 4380426448: Door closed on floor 1
+DEBUG INFO: Elevator 4380426448 has 7 passengers
+DEBUG INFO: Elevator 4380426448 has queue [2, 3]
+DEBUG INFO: Elevator 4380426448 has current floor 3
+DEBUG INFO: Elevator 4380426448 has 7 passengers
+DEBUG INFO: Elevator 4380426448 has direction -1
+DEBUG INFO: Elevator 4380426448 has available False
+DEBUG INFO: Elevator 4380426448 has current floor 3
+ELEVATOR 4380426448: Door opened on floor 3
+DEBUG INFO: Elevator 4380426448 has direction -1
+DEBUG INFO: Elevator 4380426448 has available False
+ELEVATOR 4380426448: Dropped 2 passengers on floor 3
+ELEVATOR 4380426448: Door opened on floor 3
+ELEVATOR 4380426448: Found 3 passengers on floor 3
+ELEVATOR 4380426448: Dropped 0 passengers on floor 3
+ELEVATOR 4380426448: Loaded 3 passengers on floor 3
+ELEVATOR 4380426448: Remaining capacity 92 on floor 3
+ELEVATOR 4380426448: Door closed on floor 3
+ELEVATOR 4380426448: Door closed on floor 3
+DEBUG INFO: Elevator 4380426448 has queue [1]
+DEBUG INFO: Elevator 4380426448 has queue [2, 1]
+DEBUG INFO: Elevator 4380426448 has 8 passengers
+DEBUG INFO: Elevator 4380426448 has 8 passengers
+DEBUG INFO: Elevator 4380426448 has current floor 1
+DEBUG INFO: Elevator 4380426448 has current floor 1
+DEBUG INFO: Elevator 4380426448 has direction -1
+DEBUG INFO: Elevator 4380426448 has direction -1
+DEBUG INFO: Elevator 4380426448 has available False
+DEBUG INFO: Elevator 4380426448 has available False
+ELEVATOR 4380426448: Door opened on floor 1
+ELEVATOR 4380426448: Door opened on floor 1
+BUILDING: Passenger 4380426608 removed from building
+BUILDING: Passenger 4380426448 removed from building
+BUILDING: Passenger 4380426512 removed from building
+ELEVATOR 4380426448: Dropped 2 passengers on floor 1
+ELEVATOR 4380426448: Found 1 passengers on floor 1
+ELEVATOR 4380426448: Loaded 1 passengers on floor 1
+ELEVATOR 4380426448: Remaining capacity 94 on floor 1
+ELEVATOR 4380426448: Door closed on floor 1
+DEBUG INFO: Elevator 4380426448 has queue [4]
+DEBUG INFO: Elevator 4380426448 has 6 passengers
+DEBUG INFO: Elevator 4380426448 has current floor 4
+DEBUG INFO: Elevator 4380426448 has direction -1
+DEBUG INFO: Elevator 4380426448 has available False
+---- ELEVATOR SIMULATOR ----
+DECLARATION: Floor 0 created
+DECLARATION: Floor 1 created
+DECLARATION: Floor 2 created
+DECLARATION: Floor 3 created
+DECLARATION: Floor 4 created
+DECLARATION: Elevator 4305125584 created
+DECLARATION: Elevators created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DECLARATION: Building created
+Probability: 0.7058823529411764 Value: 1
+Probability: 0.1176470588235294 Value: 3
+Probability: 0.08823529411764705 Value: 2
+Probability: 0.08823529411764705 Value: 4
+DEBUG | WAITING: set()
+DEBUG | QUEUED: set()
+DECLARATION: Passenger 4305125584 created
+BUILDING: New passenger 4305125584 from floor 1 to floor 4
+ELEVATORS: No waiting calls
+BUILDING: Passenger 4305125584 added to floor 1
+BUILDING: Elevator called to floor 1
+DECLARATION: Passenger 4305125616 created
+BUILDING: New passenger 4305125616 from floor 1 to floor 3
+BUILDING: Passenger 4305125616 added to floor 1
+DECLARATION: Passenger 4305125648 created
+BUILDING: New passenger 4305125648 from floor 1 to floor 4
+BUILDING: Passenger 4305125648 added to floor 1
+DEBUG | WAITING: {1}
+DEBUG | QUEUED: set()
+ELEVATORS: Found elevator 4305125584 for floor 1
+DEBUG INFO: Elevator 4305125584 has queue [1]
+DECLARATION: Passenger 4305125680 created
+DEBUG INFO: Elevator 4305125584 has 0 passengers
+BUILDING: New passenger 4305125680 from floor 1 to floor 4
+DEBUG INFO: Elevator 4305125584 has current floor 1
+BUILDING: Passenger 4305125680 added to floor 1
+DEBUG INFO: Elevator 4305125584 has direction 1
+BUILDING: Elevator called to floor 1
+DEBUG INFO: Elevator 4305125584 has available False
+ELEVATOR 4305125584: Door opened on floor 1
+ELEVATOR 4305125584: Dropped 0 passengers on floor 1
+ELEVATOR 4305125584: Found 4 passengers on floor 1
+ELEVATOR 4305125584: Loaded 4 passengers on floor 1
+ELEVATOR 4305125584: Remaining capacity 96 on floor 1
+DEBUG | WAITING: {1}
+ELEVATOR 4305125584: Door closed on floor 1
+DEBUG | QUEUED: {1}
+ELEVATORS: Floor 1 is already queued
+DEBUG INFO: Elevator 4305125584 has queue [4, 3]
+DEBUG | WAITING: set()
+DEBUG INFO: Elevator 4305125584 has 4 passengers
+DEBUG | QUEUED: {1}
+ELEVATORS: No waiting calls
+DEBUG INFO: Elevator 4305125584 has current floor 3
+DECLARATION: Passenger 4305125712 created
+DEBUG INFO: Elevator 4305125584 has direction 1
+BUILDING: New passenger 4305125712 from floor 1 to floor 4
+DEBUG INFO: Elevator 4305125584 has available False
+BUILDING: Passenger 4305125712 added to floor 1
+ELEVATOR 4305125584: Door opened on floor 3
+BUILDING: Elevator called to floor 1
+ELEVATOR 4305125584: Dropped 1 passengers on floor 3
+DECLARATION: Passenger 4305125744 created
+ELEVATOR 4305125584: Door closed on floor 3
+DEBUG INFO: Elevator 4305125584 has queue [4]
+BUILDING: New passenger 4305125744 from floor 1 to floor 3
+BUILDING: Passenger 4305125744 added to floor 1
+DEBUG INFO: Elevator 4305125584 has 3 passengers
+DEBUG | WAITING: {1}
+DEBUG INFO: Elevator 4305125584 has current floor 4
+DEBUG | QUEUED: {1}
+DEBUG INFO: Elevator 4305125584 has direction 1
+DEBUG INFO: Elevator 4305125584 has available False
+ELEVATORS: Floor 1 is already queued
+ELEVATOR 4305125584: Door opened on floor 4
+DEBUG | WAITING: {1}
+ELEVATOR 4305125584: Dropped 3 passengers on floor 4
+DEBUG | QUEUED: {1}
+ELEVATOR 4305125584: Door closed on floor 4
+ELEVATORS: Floor 1 is already queued
+ELEVATOR 4305125584: Elevator is now idle
+DEBUG | WAITING: set()
+ELEVATOR 4305125584: Moving to floor 4
+DEBUG | QUEUED: {1}
+ELEVATOR 4305125584: Moving to floor 4
+ELEVATORS: No waiting calls
+DECLARATION: Passenger 4305125776 created
+BUILDING: New passenger 4305125776 from floor 1 to floor 3
+BUILDING: Passenger 4305125776 added to floor 1
+BUILDING: Elevator called to floor 1
+DECLARATION: Passenger 4305125808 created
+BUILDING: New passenger 4305125808 from floor 1 to floor 2
+BUILDING: Passenger 4305125808 added to floor 1
+DECLARATION: Passenger 4305125840 created
+BUILDING: New passenger 4305125840 from floor 1 to floor 3
+BUILDING: Passenger 4305125840 added to floor 1
+DEBUG | WAITING: {1}
+BUILDING: Elevator called to floor 1
+DEBUG | QUEUED: {1}
+ELEVATORS: Floor 1 is already queued
+DEBUG INFO: Elevator 4305125584 has queue [1]
+DEBUG INFO: Elevator 4305125584 has queue [1]
+DEBUG INFO: Elevator 4305125584 has 0 passengers
+DEBUG INFO: Elevator 4305125584 has 0 passengers
+DEBUG INFO: Elevator 4305125584 has current floor 4
+DEBUG INFO: Elevator 4305125584 has current floor 4
+DEBUG INFO: Elevator 4305125584 has direction -1
+DEBUG INFO: Elevator 4305125584 has direction -1
+DEBUG INFO: Elevator 4305125584 has available False
+DECLARATION: Passenger 4305125872 created
+DEBUG INFO: Elevator 4305125584 has available False
+ELEVATOR 4305125584: Door opened on floor 4
+ELEVATOR 4305125584: Dropped 0 passengers on floor 4
+BUILDING: New passenger 4305125872 from floor 1 to floor 4
+ELEVATOR 4305125584: Door opened on floor 4
+BUILDING: Passenger 4305125872 added to floor 1
+ELEVATOR 4305125584: Found 3 passengers on floor 4
+ELEVATOR 4305125584: Dropped 0 passengers on floor 4
+BUILDING: Elevator called to floor 1
+ELEVATOR 4305125584: Loaded 3 passengers on floor 4
+ELEVATOR 4305125584: Remaining capacity 97 on floor 4
+ELEVATOR 4305125584: Door closed on floor 4
+ELEVATOR 4305125584: Door closed on floor 4
+DEBUG INFO: Elevator 4305125584 has queue [1, 3]
+DEBUG INFO: Elevator 4305125584 has queue [1]
+DEBUG INFO: Elevator 4305125584 has 3 passengers
+DEBUG INFO: Elevator 4305125584 has 3 passengers
+DEBUG INFO: Elevator 4305125584 has current floor 1
+DEBUG INFO: Elevator 4305125584 has current floor 1
+DEBUG INFO: Elevator 4305125584 has direction -1
+DEBUG INFO: Elevator 4305125584 has available False
+DEBUG INFO: Elevator 4305125584 has direction -1
+DEBUG INFO: Elevator 4305125584 has available False
+ELEVATOR 4305125584: Door opened on floor 1
+ELEVATOR 4305125584: Door opened on floor 1
+BUILDING: Passenger 4305125584 removed from building
+BUILDING: Passenger 4305125648 removed from building
+ELEVATOR 4305125584: Dropped 1 passengers on floor 1
+ELEVATOR 4305125584: Found 6 passengers on floor 1
+ELEVATOR 4305125584: Loaded 6 passengers on floor 1
+ELEVATOR 4305125584: Remaining capacity 93 on floor 1
+ELEVATOR 4305125584: Door closed on floor 1
+DEBUG INFO: Elevator 4305125584 has queue [3, 4, 2]
+DEBUG INFO: Elevator 4305125584 has 7 passengers
+DEBUG INFO: Elevator 4305125584 has current floor 4
+DEBUG INFO: Elevator 4305125584 has direction -1
+DEBUG INFO: Elevator 4305125584 has available False
+ELEVATOR 4305125584: Door opened on floor 4
+ELEVATOR 4305125584: Dropped 2 passengers on floor 4
+ELEVATOR 4305125584: Found 1 passengers on floor 4
+ELEVATOR 4305125584: Loaded 1 passengers on floor 4
+ELEVATOR 4305125584: Remaining capacity 94 on floor 4
+ELEVATOR 4305125584: Door closed on floor 4
+DEBUG INFO: Elevator 4305125584 has queue [3, 2, 1]
+DEBUG INFO: Elevator 4305125584 has 6 passengers
+DEBUG INFO: Elevator 4305125584 has current floor 3
+DEBUG INFO: Elevator 4305125584 has direction -1
+DEBUG INFO: Elevator 4305125584 has available False
+ELEVATOR 4305125584: Door opened on floor 3
+ELEVATOR 4305125584: Dropped 4 passengers on floor 3
+ELEVATOR 4305125584: Found 1 passengers on floor 3
+ELEVATOR 4305125584: Loaded 1 passengers on floor 3
+ELEVATOR 4305125584: Remaining capacity 97 on floor 3
+ELEVATOR 4305125584: Door closed on floor 3
+DEBUG INFO: Elevator 4305125584 has queue [2, 1]
+DEBUG INFO: Elevator 4305125584 has 3 passengers
+DEBUG INFO: Elevator 4305125584 has current floor 2
+DEBUG INFO: Elevator 4305125584 has direction -1
+DEBUG INFO: Elevator 4305125584 has available False
+ELEVATOR 4305125584: Door opened on floor 2
+ELEVATOR 4305125584: Dropped 1 passengers on floor 2
+ELEVATOR 4305125584: Door closed on floor 2
+DEBUG INFO: Elevator 4305125584 has queue [1]
+DEBUG INFO: Elevator 4305125584 has 2 passengers
+DEBUG INFO: Elevator 4305125584 has current floor 1
+DEBUG INFO: Elevator 4305125584 has direction -1
+DEBUG INFO: Elevator 4305125584 has available False
+ELEVATOR 4305125584: Door opened on floor 1
+BUILDING: Passenger 4305125616 removed from building
+BUILDING: Passenger 4305125872 removed from building
+ELEVATOR 4305125584: Dropped 2 passengers on floor 1
+ELEVATOR 4305125584: Door closed on floor 1
+ELEVATOR 4305125584: Elevator is now idle
+ELEVATOR 4305125584: Moving to floor 1
+ELEVATOR 4305125584: Moving to floor 1
+ELEVATOR 4305125584: Moving to floor 1
+ELEVATOR 4305125584: Moving to floor 1
+ELEVATOR 4305125584: Moving to floor 1

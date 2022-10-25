@@ -31,6 +31,8 @@ def cprint(text, color):
         'reset': '\033[0m',
     }
     print(colors[color] + f"{text : <70}" + colors['red'] + f"{timestamp() : >70}" + colors['reset'])
+    with open("log.txt", "a") as f:
+        f.write(f"{text}\n")
 
 def timestamp():
     # h:m:s.ms
