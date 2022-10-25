@@ -7,6 +7,19 @@ from helpers import setTimeout, cprint, timestamp
 from constants import *
 
 TERMINATE = [False, False]
+floors = []
+probability = None
+building = None
+
+class VirtualTime():
+    def __init__(self):
+        self.time = 0
+
+    def increment(self, amount):
+        self.time += amount
+
+    def get(self):
+        return self.time
 
 class Probability():
 
@@ -54,6 +67,7 @@ class Passenger():
         self.id = id
         self.origin = start
         self.destination = end
+        self.wait = []
 
         if start == end:
             raise ValueError('Passenger cannot have same origin and destination')
@@ -98,6 +112,8 @@ class Floor(object):
         self.passengers_count = passengers_count
         self.passengers = set()
         self.floor = floor
+        self.called_up = False
+        self.called_down = False
 
         cprint(f'DECLARATION: Floor {self.floor} created', 'magenta')
 
@@ -105,7 +121,7 @@ class Floor(object):
         self.passengers.add(passenger)
 
     def remove_passenger(self, passenger):
-        self.passengers.remove(passenger)
+        passenger in self.passengers and self.passengers.remove(passenger)
 
     def check_floor(self):
         return {
@@ -123,22 +139,24 @@ class Elevator(object):
         self.passenagers = set()
         self.direction = 1                # 1 = up, -1 = down, 0 is idle
         self.available = True
-        self.queue = set()
+        self.queue = []
         self.door_delay = door_delay
         self.passenger_idle_time = passenger_idle_time
         self.time = 0
 
         cprint(f'DECLARATION: Elevator {self.id} created', 'magenta')
 
-    def queue(self, floor):
-        self.queue.add(floor)
+    def add_to_queue(self, floor):
+        if floor not in self.queue:
+            self.queue.append(floor)
 
     def add_passenger(self, passenger):
         if passenger.destination == passenger.origin:
             return
         elif (self.capacity - len(self.passenagers)) > 0:
             self.passenagers.add(passenger)
-            self.queue.add(passenger.destination)
+            floors[passenger.origin].remove_passenger(passenger)
+            self.add_to_queue(passenger.destination)
 
     def sleep(self, time):
         self.time += time
@@ -152,7 +170,8 @@ class Elevator(object):
         self.sleep(sleep_time)
 
     def drop_passengers(self):
-        for passenger in self.passenagers:
+        lock_psg = self.passenagers.copy()
+        for passenger in lock_psg:
             if passenger.destination == self.current_floor:
                 self.passenagers.remove(passenger)
                 floors[passenger.origin].remove_passenger(passenger)
@@ -163,16 +182,31 @@ class Elevator(object):
                 self.sleep(self.passenger_idle_time)
 
     def load_passengers(self, passengers, capacity):
-        for passenger in passengers:
-            if (capacity > 0):
-                if (passenger.destination == self.current_floor):
-                    continue
-                self.add_passenger(passenger)
-                self.sleep(self.passenger_idle_time)
-                capacity -= 1
-            else:
+        while True:
+            if len(passengers) == 0:
                 break
+            if (self.capacity - len(self.passenagers)) == 0:
+                break
+            passenger = passengers.pop()
+            if passenger.origin == self.current_floor:
+                self.passenagers.add(passenger)
+                floors[passenger.origin].remove_passenger(passenger)
+                self.add_to_queue(passenger.destination)
+                print("ELEVATOR ROUTINE {}: Loaded passenger {} on floor {}".format(self.id, passenger.id, self.current_floor))
 
+    def dequeue_current_floor(self):
+        if self.current_floor in self.queue:
+            self.queue.remove(self.current_floor)
+
+    def next_floor(self):
+        if len(self.queue) == 0:
+            return None
+        if self.direction == 1:
+            return min(self.queue)
+        elif self.direction == -1:
+            return max(self.queue)
+        else:
+            return None
 
     # Elevator lifecycle
     # 1. Open door (1000ms)
@@ -188,33 +222,60 @@ class Elevator(object):
     # 5. Move to next floor
     # 6. Repeat from 1
     def execute_floor_move(self):
+        cprint(f'DEBUG INFO: Elevator {self.id} has queue {self.queue}', 'yellow')
+        cprint(f'DEBUG INFO: Elevator {self.id} has {len(self.passenagers)} passengers', 'yellow')
+        cprint(f'DEBUG INFO: Elevator {self.id} has current floor {self.current_floor}', 'yellow')
+        cprint(f'DEBUG INFO: Elevator {self.id} has direction {self.direction}', 'yellow')
+        cprint(f'DEBUG INFO: Elevator {self.id} has available {self.available}', 'yellow')
         self.open_door(self.door_delay)
+        cprint(f'ELEVATOR {self.id}: Door opened on floor {self.current_floor}', 'red')
         self.drop_passengers()
+        cprint(f'ELEVATOR {self.id}: Dropped passengers on floor {self.current_floor}', 'red')
         checked_floor = floors[self.current_floor].check_floor()
-        if (checked_floor.length > 0):
+        if (checked_floor['len'] > 0):
             remaining_capacity = self.capacity - len(self.passenagers)
             if (remaining_capacity > 0):
-                self.load_passengers(checked_floor.passengers, remaining_capacity)
+                cprint(f'ELEVATOR {self.id}: Found {checked_floor["len"]} passengers on floor {self.current_floor}', 'red')
+                self.load_passengers(checked_floor['passengers'], remaining_capacity)
+                remaining_capacity = self.capacity - min(remaining_capacity, len(self.passenagers))
+                if (not remaining_capacity == (self.capacity - len(self.passenagers))):
+                    cprint(f'DEBUG IN ELEVATOR {self.id}: Integrity check violated on floor {self.current_floor}', 'yellow')
+                cprint(f'ELEVATOR {self.id}: Loaded passengers on floor {self.current_floor}', 'red')
+                cprint(f'ELEVATOR {self.id}: Loaded {len(self.passenagers)} passengers on floor {self.current_floor}', 'red')
+                cprint(f'ELEVATOR {self.id}: Remaining capacity {remaining_capacity} on floor {self.current_floor}', 'red')
         self.close_door(self.door_delay)
+        cprint(f'ELEVATOR {self.id}: Door closed on floor {self.current_floor}', 'red')
+        self.dequeue_current_floor()
         if (len(self.queue) > 0):
-            self.execute_floor_move(self.queue.pop(0))
             self.sleep(self.speed)
-            self.current_floor = self.current_floor + self.direction
+            self.current_floor = self.next_floor()
+            self.execute_floor_move()
+            cprint(f'ELEVATOR {self.id}: Moving to floor {self.current_floor}', 'red')
         else:
             self.direction = 0
             self.available = True
+            cprint(f'ELEVATOR {self.id}: Elevator is now idle', 'red')
 
-    def call(self, floor):
+    def call(self, floor, force=False):
+        force and self.add_to_queue(floor)
         if (abs(floor) > abs(self.floors)):
             raise ValueError("Floor {} is out of bounds".format(floor))
         if (self.direction == 1 and floor > self.current_floor):
-            self.queue(floor)
+            self.add_to_queue(floor)
         elif (self.direction == -1 and floor < self.current_floor):
-            self.queue(floor)
+            self.add_to_queue(floor)
         elif (self.direction == 0):
             self.direction = 1 if floor > self.current_floor else -1
-            self.queue(floor)
+            self.add_to_queue(floor)
             self.execute_floor_move()
+
+    def run(self):
+        while True:
+            if (self.available and len(self.queue) > 0):
+                self.available = False
+                self.execute_floor_move()
+            else:
+                self.sleep(0.5)
 
 class Elevators(object):
 
@@ -226,7 +287,7 @@ class Elevators(object):
     def __init__(self, count, floors, logic = ALGORITHIM):
         self.count = count
         self.floors = floors
-        self.elevators = [Elevator(id(i), floors, 10, self.floor_delay, self.door_delay, self.caller_delay, 1) for i in range(count)]
+        self.elevators = [Elevator(id(i), floors, 100, self.floor_delay, self.door_delay, self.caller_delay, 1) for i in range(count)]
         self.queued = set()
         self.waiting = set()
         if (logic == "random"):
@@ -251,13 +312,13 @@ class Elevators(object):
     def random_logic(self, floor):
         for elevator in self.elevators:
             if (elevator.available):
-                elevator.call(floor)
+                elevator.call(floor, force=True)
                 return elevator.id
             elif (elevator.direction == 1 and floor > elevator.current_floor):
-                elevator.call(floor)
+                elevator.call(floor, force=True)
                 return elevator.id
             elif (elevator.direction == -1 and floor < elevator.current_floor):
-                elevator.call(floor)
+                elevator.call(floor, force=True)
                 return elevator.id
             else:
                 continue
@@ -320,14 +381,23 @@ class Buliding(object):
         self.floors[passenger.origin].add_passenger(passenger)
         cprint("BUILDING: Passenger {} added to floor {}".format(passenger.id, passenger.origin), "blue")
 
-        self.elevators.call(passenger.origin, passenger.destination - passenger.origin > 0 if 1 else -1)
-        cprint("BUILDING: Elevator called to floor {}".format(passenger.origin), "blue")
+        direction = passenger.destination - passenger.origin > 0 if 1 else -1
+        should_call = False
+        if (self.floors[passenger.origin].called_up == False and direction == 1):
+            self.floors[passenger.origin].called_up = True
+            should_call = True
+        elif (self.floors[passenger.origin].called_down == False and direction == -1):
+            self.floors[passenger.origin].called_down = True
+            should_call = True
+        should_call and self.elevators.call(passenger.origin, direction)
+        should_call and cprint("BUILDING: Elevator called to floor {}".format(passenger.origin), "blue")
 
         setTimeout(0.01, passenger.run)
         time.sleep(math.floor(random() * 2))
 
     def remove_passenger(self, passenger):
-        self.passengers.remove(passenger)
+        not passenger in self.passengers and cprint("BUILDING: Passenger {} is not in building".format(passenger.id), "red")
+        passenger in self.passengers and self.passengers.remove(passenger)
         for floor in self.floors:
             if passenger in floor.passengers:
                 floor.passengers.remove(passenger)
@@ -341,6 +411,8 @@ class Buliding(object):
     async def run_dispatcher(self):
         setTimeout(0.01, self.elevators.simulate)
         setTimeout(0.01, self.simulate)
+        for elevator in self.elevators.elevators:
+            setTimeout(0.01, elevator.run)
         while True:
             if (all(TERMINATE)):
                 break
@@ -355,10 +427,13 @@ class Buliding(object):
 
 def run():
     # Create a Building instance
+    global building
     building = Buliding(FLOORS, ELEVATORS, PEOPLE)
     # Expose floors
+    global floors
     floors = building.floors
     # Expose probability
+    global probability
     probability = Probability(PROBABILITY)
     # Run the simulation
     building.run()

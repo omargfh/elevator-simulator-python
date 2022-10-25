@@ -1,0 +1,14 @@
+# ignore pycache
+__pycache__/
+
+# ignore .pyc files
+*.pyc
+
+# ignore .DS_Store files
+.DS_Store
+
+# ignore .env files
+.env
+
+# ignore ipynb checkpoints
+.ipynb_checkpoints/
